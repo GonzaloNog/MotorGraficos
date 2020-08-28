@@ -1,0 +1,4 @@
+﻿  Game.cpp
+c:\users\usuario\desktop\motorgraficos\graficosmotor\graficosmotor\basegame.h(1): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
+  Main.cpp
+c:\users\usuario\desktop\motorgraficos\graficosmotor\graficosmotor\basegame.h(1): fatal error C1083: No se puede abrir el archivo incluir: 'glew.h': No such file or directory
