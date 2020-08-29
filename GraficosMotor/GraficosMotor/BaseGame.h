@@ -18,5 +18,7 @@ public:
 	void OpenWindows(int x, int y, std::string name);
 	void DrawTriangle();
 	void Update();
+	void SetColorBackground(float a, float b, float c);
+	void SetColorBackground(float a, float b, float c, float d);
 };
 

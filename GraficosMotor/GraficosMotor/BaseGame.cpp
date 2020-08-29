@@ -19,3 +19,9 @@ void BaseGame::Update() {
 
 	}
 }
+void BaseGame::SetColorBackground(float a, float b, float c) {
+	window->SetColorBackground(a, b, c);
+}
+void BaseGame::SetColorBackground(float a, float b, float c, float d) {
+	window->setColorBackground(a,b,c,d);
+}
