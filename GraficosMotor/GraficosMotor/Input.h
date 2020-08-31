@@ -1,18 +1,16 @@
 #include <glew.h>
 #include <glfw3.h>
-#include <stdio.h>
-#include <stdlib.h>
-#include <string>
-#include "Windows.h"
+#include "Exports.h"
+#include <iostream>
 
 class ZENGINE_API Input
 {
 protected:
-	Windows* wind;
+	GLFWwindow* wind;
 public:
 	Input();
 	~Input();
-	void Initialize(Windows * _windows);
+	void Initialize(GLFWwindow * _windows);
 	bool PressedKey(std::string keyCode);
 };
 

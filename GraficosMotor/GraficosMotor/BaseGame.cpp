@@ -11,7 +11,7 @@ void BaseGame::OpenWindows(int x, int y, std::string name) {
 	window = new Windows();
 	window->Open(x, y, name);
 	input = new Input();
-	input->Initialize(window);
+	input->Initialize(window->GetWindows());
 }
 void BaseGame::DrawTriangle() {
 

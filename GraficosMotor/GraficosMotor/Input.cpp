@@ -5,12 +5,12 @@ Input::Input() {
 Input::~Input() {
 
 }
-void Input::Initialize(Windows* _wind) {
+void Input::Initialize(GLFWwindow* _wind) {
 	wind = _wind;
 }
 bool Input::PressedKey(std::string keyCode) {
 	if (keyCode == "space") {
-		if (glfwGetKey(wind->GetWindows(), GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+		if (glfwGetKey(wind, GLFW_KEY_SPACE) == GLFW_PRESS) {
 			return true;
 		}
 	}

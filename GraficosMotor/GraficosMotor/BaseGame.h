@@ -6,6 +6,7 @@
 #include "Input.h"
 #include "Windows.h"
 #include <string>
+#include <iostream>
 
 class ZENGINE_API BaseGame
 {

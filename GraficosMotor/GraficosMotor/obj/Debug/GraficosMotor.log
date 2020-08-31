@@ -1,51 +1,32 @@
-﻿  BaseGame.cpp
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(10,1): error C2011: 'Windows': nueva definición del tipo 'class'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(9): message : vea la declaración de 'Windows'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(4,22): warning C4273: 'BaseGame::BaseGame': vinculación de DLL incoherente
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(18,2): message : vea la definición anterior de '{ctor}'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(7,23): warning C4273: 'BaseGame::~BaseGame': vinculación de DLL incoherente
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(19,3): message : vea la definición anterior de '{dtor}'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(10,60): warning C4273: 'BaseGame::OpenWindows': vinculación de DLL incoherente
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(21,7): message : vea la definición anterior de 'OpenWindows'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(11,24): error C2027: uso del tipo 'Windows' sin definir
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(9): message : vea la declaración de 'Windows'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(12,8): error C2027: uso del tipo 'Windows' sin definir
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(9): message : vea la declaración de 'Windows'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(16,31): warning C4273: 'BaseGame::DrawTriangle': vinculación de DLL incoherente
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(27,7): message : vea la definición anterior de 'DrawTriangle'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(19,25): warning C4273: 'BaseGame::Update': vinculación de DLL incoherente
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(22,7): message : vea la definición anterior de 'Update'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(20,15): error C2027: uso del tipo 'Windows' sin definir
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(9): message : vea la declaración de 'Windows'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(24,62): warning C4273: 'BaseGame::SetColorBackground': vinculación de DLL incoherente
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(23,7): message : vea la definición anterior de 'SetColorBackground'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(25,8): error C2027: uso del tipo 'Windows' sin definir
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(9): message : vea la declaración de 'Windows'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(27,71): warning C4273: 'BaseGame::SetColorBackground': vinculación de DLL incoherente
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(24,7): message : vea la definición anterior de 'SetColorBackground'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(28,8): error C2027: uso del tipo 'Windows' sin definir
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(9): message : vea la declaración de 'Windows'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(30,32): warning C4273: 'BaseGame::UpdateWindows': vinculación de DLL incoherente
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(25,7): message : vea la definición anterior de 'UpdateWindows'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(31,8): error C2027: uso del tipo 'Windows' sin definir
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(9): message : vea la declaración de 'Windows'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(33,41): warning C4273: 'BaseGame::GetKay': vinculación de DLL incoherente
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(29,7): message : vea la definición anterior de 'GetKay'
-  Windows.cpp
+﻿  Windows.cpp
 C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(3,20): warning C4273: 'Windows::Windows': vinculación de DLL incoherente
 C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(16,2): message : vea la definición anterior de '{ctor}'
 C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(6,21): warning C4273: 'Windows::~Windows': vinculación de DLL incoherente
 C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(17,3): message : vea la definición anterior de '{dtor}'
 C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(9,52): warning C4273: 'Windows::Open': vinculación de DLL incoherente
 C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(18,7): message : vea la definición anterior de 'Open'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(35,24): warning C4273: 'Windows::IsOpen': vinculación de DLL incoherente
+C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(34,24): warning C4273: 'Windows::IsOpen': vinculación de DLL incoherente
 C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(19,7): message : vea la definición anterior de 'IsOpen'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(43,61): warning C4273: 'Windows::SetColorBackground': vinculación de DLL incoherente
+C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(42,61): warning C4273: 'Windows::SetColorBackground': vinculación de DLL incoherente
 C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(20,7): message : vea la definición anterior de 'SetColorBackground'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(48,70): warning C4273: 'Windows::setColorBackground': vinculación de DLL incoherente
+C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(47,70): warning C4273: 'Windows::setColorBackground': vinculación de DLL incoherente
 C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(21,7): message : vea la definición anterior de 'setColorBackground'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(54,31): warning C4273: 'Windows::UpdateWindows': vinculación de DLL incoherente
+C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(53,31): warning C4273: 'Windows::UpdateWindows': vinculación de DLL incoherente
 C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(22,7): message : vea la definición anterior de 'UpdateWindows'
-C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(61,35): warning C4273: 'Windows::GetWindows': vinculación de DLL incoherente
+C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(59,35): warning C4273: 'Windows::GetWindows': vinculación de DLL incoherente
 C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(23,14): message : vea la definición anterior de 'GetWindows'
-  Generando código...
+     Creando biblioteca C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\bin\Debug\GraficosMotor.lib y objeto C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\bin\Debug\GraficosMotor.exp
+LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
+LINK : warning LNK4217: "??0Input@@QAE@XZ (public: __thiscall Input::Input(void))" importa el símbolo "Input.obj" definido en "BaseGame.obj" en la función ""public: void __thiscall BaseGame::OpenWindows(int,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?OpenWindows@BaseGame@@QAEXHHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)"
+LINK : warning LNK4217: "?Initialize@Input@@QAEXPAUGLFWwindow@@@Z (public: void __thiscall Input::Initialize(struct GLFWwindow *))" importa el símbolo "Input.obj" definido en "BaseGame.obj" en la función ""public: void __thiscall BaseGame::OpenWindows(int,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?OpenWindows@BaseGame@@QAEXHHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)"
+LINK : warning LNK4217: "?PressedKey@Input@@QAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z (public: bool __thiscall Input::PressedKey(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >))" importa el símbolo "Input.obj" definido en "BaseGame.obj" en la función ""public: bool __thiscall BaseGame::GetKay(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?GetKay@BaseGame@@QAE_NV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)"
+LINK : warning LNK4217: "??0Windows@@QAE@XZ (public: __thiscall Windows::Windows(void))" importa el símbolo "Windows.obj" definido en "BaseGame.obj" en la función ""public: void __thiscall BaseGame::OpenWindows(int,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?OpenWindows@BaseGame@@QAEXHHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)"
+LINK : warning LNK4217: "?Open@Windows@@QAEXHHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z (public: void __thiscall Windows::Open(int,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >))" importa el símbolo "Windows.obj" definido en "BaseGame.obj" en la función ""public: void __thiscall BaseGame::OpenWindows(int,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?OpenWindows@BaseGame@@QAEXHHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)"
+LINK : warning LNK4217: "?IsOpen@Windows@@QAE_NXZ (public: bool __thiscall Windows::IsOpen(void))" importa el símbolo "Windows.obj" definido en "BaseGame.obj" en la función ""public: void __thiscall BaseGame::Update(void)" (?Update@BaseGame@@QAEXXZ)"
+LINK : warning LNK4217: "?SetColorBackground@Windows@@QAEXMMM@Z (public: void __thiscall Windows::SetColorBackground(float,float,float))" importa el símbolo "Windows.obj" definido en "BaseGame.obj" en la función ""public: void __thiscall BaseGame::SetColorBackground(float,float,float)" (?SetColorBackground@BaseGame@@QAEXMMM@Z)"
+LINK : warning LNK4217: "?setColorBackground@Windows@@QAEXMMMM@Z (public: void __thiscall Windows::setColorBackground(float,float,float,float))" importa el símbolo "Windows.obj" definido en "BaseGame.obj" en la función ""public: void __thiscall BaseGame::SetColorBackground(float,float,float,float)" (?SetColorBackground@BaseGame@@QAEXMMMM@Z)"
+LINK : warning LNK4217: "?UpdateWindows@Windows@@QAEXXZ (public: void __thiscall Windows::UpdateWindows(void))" importa el símbolo "Windows.obj" definido en "BaseGame.obj" en la función ""public: void __thiscall BaseGame::UpdateWindows(void)" (?UpdateWindows@BaseGame@@QAEXXZ)"
+LINK : warning LNK4217: "?GetWindows@Windows@@QAEPAUGLFWwindow@@XZ (public: struct GLFWwindow * __thiscall Windows::GetWindows(void))" importa el símbolo "Windows.obj" definido en "BaseGame.obj" en la función ""public: void __thiscall BaseGame::OpenWindows(int,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?OpenWindows@BaseGame@@QAEXHHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)"
+glew32s.lib(glew.obj) : warning LNK4099: no se encontró PDB 'vc120.pdb' con 'glew32s.lib(glew.obj)' o en 'C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\bin\Debug\vc120.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
+  GraficosMotor.vcxproj -> C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\bin\Debug\GraficosMotor.dll

@@ -7,11 +7,14 @@ Game::~Game() {
 
 }
 void Game::Loop() {
+	std::cout << "Open Windows"<<std::endl;
 	OpenWindows(500, 500, "gonzalo");
+	std::cout << "Start Loop" << std::endl;
 	while (running) {
 		UpdateWindows();
 		if (GetKay("space")) {
-			SetColorBackground(0.5f,0.7f,0.3f);
+			std::cout << "space press" << std::endl;
+			SetColorBackground(0.1f,0.7f,0.3f);
 		}
 	}
 }

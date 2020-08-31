@@ -30,7 +30,6 @@ void Windows::Open(int x, int y, std::string name) {
 	if (glewInit() != GLEW_OK) {
 		fprintf(stderr, "Failed to initialize GLEW\n");
 	}
-	//
 }
 bool Windows::IsOpen() {
 	if (!glfwWindowShouldClose(window)) {
@@ -52,7 +51,6 @@ void Windows::setColorBackground(float a, float b, float c, float d) {
 	color[3] = d;
 }
 void Windows::UpdateWindows() {
-	SetColorBackground(0.5f, 0.5f, 0.5f);
 	glClearColor(color[0], color[1], color[2], color[3]);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glfwSwapBuffers(window);
