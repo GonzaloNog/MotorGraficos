@@ -30,22 +30,7 @@ void Windows::Open(int x, int y, std::string name) {
 	if (glewInit() != GLEW_OK) {
 		fprintf(stderr, "Failed to initialize GLEW\n");
 	}
-	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
-
-	do {
-		// Clear the screen. It's not mentioned before Tutorial 02, but it can cause flickering, so it's there nonetheless.
-		SetColorBackground(0.5f,0.5f,0.5f);
-		glClearColor(color[0],color[1],color[2],color[3]);
-		glClear(GL_COLOR_BUFFER_BIT);
-		// Draw nothing, see you in tutorial 2 !
-
-		// Swap buffers
-		glfwSwapBuffers(window);
-		glfwPollEvents();
-
-	} // Check if the ESC key was pressed or the window was closed
-	while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS &&
-		glfwWindowShouldClose(window) == 0);
+	//
 }
 bool Windows::IsOpen() {
 	if (!glfwWindowShouldClose(window)) {
@@ -65,4 +50,14 @@ void Windows::setColorBackground(float a, float b, float c, float d) {
 	color[1] = b;
 	color[2] = c;
 	color[3] = d;
+}
+void Windows::UpdateWindows() {
+	SetColorBackground(0.5f, 0.5f, 0.5f);
+	glClearColor(color[0], color[1], color[2], color[3]);
+	glClear(GL_COLOR_BUFFER_BIT);
+	glfwSwapBuffers(window);
+	glfwPollEvents();
+}
+GLFWwindow* Windows::GetWindows() {
+	return window;
 }

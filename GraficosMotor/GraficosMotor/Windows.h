@@ -10,14 +10,16 @@ class ZENGINE_API Windows
 {
 private:
 protected:
-	float color[4] = {0.1f,0.1f,0.1f,1.0f};
-	GLFWwindow* window;
+	float color[4] = {0.1f,0.1f,0.1f,1.0f};//Maneja el color de la pantalla
+	GLFWwindow* window;//Puntero de una ventana GLFW
 public:
 	Windows();
 	~Windows();
-	void Open(int x, int y, std::string name);
-	bool IsOpen();
-	void SetColorBackground(float a, float b, float c);
-	void setColorBackground(float a, float b, float c, float d);
+	void Open(int x, int y, std::string name);//Crea una ventana nueva con GLFW
+	bool IsOpen();//Comprueba si la ventana esta abierta 
+	void SetColorBackground(float a, float b, float c);//Cambia el color de la ventana
+	void setColorBackground(float a, float b, float c, float d);//Cambia el color y el alpha de la ventana
+	void UpdateWindows();//Refresca la pantalla (frame)
+	GLFWwindow* GetWindows();
 };
 

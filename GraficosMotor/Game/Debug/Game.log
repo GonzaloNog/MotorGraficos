@@ -1,2 +1,7 @@
-﻿  Main.cpp
-  Game.vcxproj -> C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\Debug\Game.exe
+﻿  Game.cpp
+C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(10,1): error C2011: 'Windows': nueva definición del tipo 'class'
+C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(9): message : vea la declaración de 'Windows'
+  Main.cpp
+C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(10,1): error C2011: 'Windows': nueva definición del tipo 'class'
+C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(9): message : vea la declaración de 'Windows'
+  Generando código...
