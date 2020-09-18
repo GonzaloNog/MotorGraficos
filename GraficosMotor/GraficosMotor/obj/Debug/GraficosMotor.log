@@ -1,30 +1,18 @@
-﻿  BaseGame.cpp
-c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\basegame.cpp(4): warning C4273: 'BaseGame::BaseGame': vinculación de DLL incoherente
-  c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\basegame.h(16): note: vea la definición anterior de '{ctor}'
-c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\basegame.cpp(7): warning C4273: 'BaseGame::~BaseGame': vinculación de DLL incoherente
-  c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\basegame.h(17): note: vea la definición anterior de '{dtor}'
-c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\basegame.cpp(10): warning C4273: 'BaseGame::OpenWindows': vinculación de DLL incoherente
-  c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\basegame.h(18): note: vea la definición anterior de 'OpenWindows'
-c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\basegame.cpp(14): warning C4273: 'BaseGame::DrawTriangle': vinculación de DLL incoherente
-  c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\basegame.h(19): note: vea la definición anterior de 'DrawTriangle'
-c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\basegame.cpp(17): warning C4273: 'BaseGame::Update': vinculación de DLL incoherente
-  c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\basegame.h(20): note: vea la definición anterior de 'Update'
-  Renderer.cpp
-  Windows.cpp
-c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\windows.cpp(3): warning C4273: 'Windows::Windows': vinculación de DLL incoherente
-  c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\windows.h(15): note: vea la definición anterior de '{ctor}'
-c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\windows.cpp(6): warning C4273: 'Windows::~Windows': vinculación de DLL incoherente
-  c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\windows.h(16): note: vea la definición anterior de '{dtor}'
-c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\windows.cpp(9): warning C4273: 'Windows::Open': vinculación de DLL incoherente
-  c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\windows.h(17): note: vea la definición anterior de 'Open'
-c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\windows.cpp(49): warning C4273: 'Windows::IsOpen': vinculación de DLL incoherente
-  c:\users\usuario\desktop\zeissgonzalomotorgraficos\motorgraficos\graficosmotor\graficosmotor\windows.h(18): note: vea la definición anterior de 'IsOpen'
-  Generando código...
-     Creando biblioteca C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\bin\Debug\GraficosMotor.lib y objeto C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\bin\Debug\GraficosMotor.exp
-LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
-LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
-BaseGame.obj : warning LNK4217: se importó el símbolo ??0Windows@@QAE@XZ (public: __thiscall Windows::Windows(void)) definido localmente en la función "public: void __thiscall BaseGame::OpenWindows(int,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?OpenWindows@BaseGame@@QAEXHHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-BaseGame.obj : warning LNK4217: se importó el símbolo ?Open@Windows@@QAEXHHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z (public: void __thiscall Windows::Open(int,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)) definido localmente en la función "public: void __thiscall BaseGame::OpenWindows(int,int,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?OpenWindows@BaseGame@@QAEXHHV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)
-BaseGame.obj : warning LNK4217: se importó el símbolo ?IsOpen@Windows@@QAE_NXZ (public: bool __thiscall Windows::IsOpen(void)) definido localmente en la función "public: void __thiscall BaseGame::Update(void)" (?Update@BaseGame@@QAEXXZ)
-glew32s.lib(glew.obj) : warning LNK4099: no se encontró PDB 'vc120.pdb' con 'glew32s.lib(glew.obj)' o en 'C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\bin\Debug\vc120.pdb'; se vinculará el objeto sin tener en cuenta información de depuración
-  GraficosMotor.vcxproj -> C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\bin\Debug\GraficosMotor.dll
+﻿  Windows.cpp
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(3,20): warning C4273: 'Windows::Windows': vinculación de DLL incoherente
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(16,2): message : vea la definición anterior de '{ctor}'
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(6,21): warning C4273: 'Windows::~Windows': vinculación de DLL incoherente
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(17,3): message : vea la definición anterior de '{dtor}'
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(9,52): warning C4273: 'Windows::Open': vinculación de DLL incoherente
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(18,7): message : vea la definición anterior de 'Open'
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(42,24): warning C4273: 'Windows::IsOpen': vinculación de DLL incoherente
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(19,7): message : vea la definición anterior de 'IsOpen'
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(50,61): warning C4273: 'Windows::SetColorBackground': vinculación de DLL incoherente
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(20,7): message : vea la definición anterior de 'SetColorBackground'
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(55,70): warning C4273: 'Windows::setColorBackground': vinculación de DLL incoherente
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(21,7): message : vea la definición anterior de 'setColorBackground'
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(61,31): warning C4273: 'Windows::UpdateWindows': vinculación de DLL incoherente
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(22,7): message : vea la definición anterior de 'UpdateWindows'
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.cpp(68,35): warning C4273: 'Windows::GetWindows': vinculación de DLL incoherente
+C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\Windows.h(23,14): message : vea la definición anterior de 'GetWindows'
+  GraficosMotor.vcxproj -> C:\Users\noggo\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\GraficosMotor\bin\Debug\GraficosMotor.dll

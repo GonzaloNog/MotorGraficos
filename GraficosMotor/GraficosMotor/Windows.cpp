@@ -7,7 +7,14 @@ Windows::~Windows() {
 
 }
 void Windows::Open(int x, int y, std::string name) {
-	glewExperimental = true; // Needed for core profile
+	//glewExperimental = true; // Needed for core profile
+	glfwInit();
+	window = glfwCreateWindow(x, y, name.c_str(), NULL, NULL);
+	glfwMakeContextCurrent(window);
+
+	glewExperimental = GL_TRUE;
+	glewInit();
+	/*
 	if (!glfwInit())
 	{
 		fprintf(stderr, "Failed to initialize GLFW\n");
@@ -29,22 +36,8 @@ void Windows::Open(int x, int y, std::string name) {
 	glewExperimental = true; // Needed in core profile
 	if (glewInit() != GLEW_OK) {
 		fprintf(stderr, "Failed to initialize GLEW\n");
-	}
-	glfwSetInputMode(window, GLFW_STICKY_KEYS, GL_TRUE);
-
-	do {
-		// Clear the screen. It's not mentioned before Tutorial 02, but it can cause flickering, so it's there nonetheless.
-		glClear(GL_COLOR_BUFFER_BIT);
-
-		// Draw nothing, see you in tutorial 2 !
-
-		// Swap buffers
-		glfwSwapBuffers(window);
-		glfwPollEvents();
-
-	} // Check if the ESC key was pressed or the window was closed
-	while (glfwGetKey(window, GLFW_KEY_ESCAPE) != GLFW_PRESS &&
-		glfwWindowShouldClose(window) == 0);
+	}*/
+	
 }
 bool Windows::IsOpen() {
 	if (!glfwWindowShouldClose(window)) {
@@ -54,3 +47,28 @@ bool Windows::IsOpen() {
 		return false;
 	}
 }
+void Windows::SetColorBackground(float a, float b, float c) {
+	color[0] = a;
+	color[1] = b;
+	color[2] = c;
+}
+void Windows::setColorBackground(float a, float b, float c, float d) {
+	color[0] = a;
+	color[1] = b;
+	color[2] = c;
+	color[3] = d;
+}
+void Windows::UpdateWindows() {
+		glClearColor(color[0], color[1], color[2], color[3]);
+		glClear(GL_COLOR_BUFFER_BIT);
+		glDrawArrays(GL_TRIANGLES, 0, 3);
+		glfwSwapBuffers(window);
+		glfwPollEvents();
+}
+GLFWwindow* Windows::GetWindows() {
+	return window;
+}
+/*int Windows::CreateShader(const std::string& vertexShader, const std::string& fragmentShader) {
+	unsigned int program = glCreateProgram();
+	unsigned int vs = glCreateShader(GL_VERTEX_SHADER);
+}*/
