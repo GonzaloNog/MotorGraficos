@@ -39,6 +39,7 @@ bool Windows::IsOpen() {
 		return false;
 	}
 }
+<<<<<<< Updated upstream
 void Windows::SetColorBackground(float a, float b, float c) {
 	color[0] = a;
 	color[1] = b;
@@ -56,6 +57,8 @@ void Windows::UpdateWindows() {
 	glfwSwapBuffers(window);
 	glfwPollEvents();
 }
+=======
+>>>>>>> Stashed changes
 GLFWwindow* Windows::GetWindows() {
 	return window;
 }

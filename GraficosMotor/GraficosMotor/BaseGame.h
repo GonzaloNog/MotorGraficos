@@ -23,7 +23,7 @@ public:
 	void Update();//Update del motor
 	void SetColorBackground(float a, float b, float c);//Le pide a la clase Windows que cambia el color del fondo 
 	void SetColorBackground(float a, float b, float c, float d);// Le pide a la clase Windows que cambia el color de fondo y el alpha
-	void UpdateWindows();
+	void UpdateWindow();
 	//Render
 	void DrawTriangle();
 	//Input

@@ -14,7 +14,10 @@ void BaseGame::OpenWindows(int x, int y, std::string name) {
 	input->Initialize(window->GetWindows());
 }
 void BaseGame::DrawTriangle() {
+<<<<<<< Updated upstream
 
+=======
+>>>>>>> Stashed changes
 }
 void BaseGame::Update() {
 	while (window->IsOpen()) {
@@ -22,13 +25,13 @@ void BaseGame::Update() {
 	}
 }
 void BaseGame::SetColorBackground(float a, float b, float c) {
-	window->SetColorBackground(a, b, c);
+	rend->SetColorBackground(a, b, c);
 }
 void BaseGame::SetColorBackground(float a, float b, float c, float d) {
-	window->setColorBackground(a,b,c,d);
+	rend->setColorBackground(a,b,c,d);
 }
-void BaseGame::UpdateWindows() {
-	window->UpdateWindows();
+void BaseGame::UpdateWindow() {
+	rend->UpdateWindow(window->GetWindows());
 }
 bool BaseGame::GetKay(std::string _kay) {
 	return input->PressedKey(_kay);

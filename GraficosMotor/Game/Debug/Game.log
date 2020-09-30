@@ -1,2 +1,8 @@
 ﻿  Game.cpp
+<<<<<<< Updated upstream
   Game.vcxproj -> C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\Debug\Game.exe
+=======
+  Main.cpp
+  Generando código...
+  Game.vcxproj -> C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Debug\Game.exe
+>>>>>>> Stashed changes
