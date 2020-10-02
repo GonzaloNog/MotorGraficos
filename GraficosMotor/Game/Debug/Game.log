@@ -3,6 +3,6 @@ C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\Game.cpp(20,25): war
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\Game.cpp(24,28): warning C4305: 'argumento': truncamiento de 'double' a 'float'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\Game.cpp(28,28): warning C4305: 'argumento': truncamiento de 'double' a 'float'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\Game.cpp(32,29): warning C4305: 'argumento': truncamiento de 'double' a 'float'
-  Main.cpp
-  Generando código...
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\Game.cpp(37,27): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\Game.cpp(42,28): warning C4305: 'argumento': truncamiento de 'double' a 'float'
   Game.vcxproj -> C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Debug\Game.exe

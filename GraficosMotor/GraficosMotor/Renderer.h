@@ -18,6 +18,10 @@ public:
 	void UpdateWindow(GLFWwindow* win);
 	void MoveEntity(float speed,std::string moveDirection);
 	void ScaleEntity(float scale);
+	void ModifyScaleEntity(float scale);
+	void RotationXEntity(float _angle);
+	void RotationYEntity(float _angle);
+	void RotationZEntity(float _angle);
 	void SetColorBackground(float a, float b, float c);//Cambia el color de la ventana
 	void setColorBackground(float a, float b, float c, float d);//Cambia el color y el alpha de la ventana
 };

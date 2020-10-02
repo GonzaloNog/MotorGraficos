@@ -36,19 +36,22 @@ int Entity::CodeString(std::string figure) {
 void Entity::TrasformPosition(float pod[6]) {
 	for (int a = 0; a < LongitudArray(); a++) {
 		positions[a] = pod[a];
-		scaleBase[a] = pod[a];
 	}
 }
-void Entity::Scale(float scale) {
-	for(int a = 0; a < LongitudArray(); a++) {
-		positions[a] = scaleBase[a] * scale;
-	}
+void Entity::Scale(float _scale) {
+	scale = _scale;
 }
-void Entity::Rotation(std::string eje, float angle) {
-	if (eje == "x") {
-		positions[2] = cos(angle) * positions[2];
-		positions[4] = sin(angle) * positions[4];
-	}
+void Entity::ModifyScale(float _scale) {
+	scale += _scale;
+}
+void Entity::RotationX(float angle) {
+	rotationX += angle;
+}
+void Entity::RotationY(float angle) {
+	rotationY += angle;
+}
+void Entity::RotationZ(float angle) {
+	rotationZ += angle;
 }
 void Entity::MovePosition(float speed, std::string MoveDirection) {
 	switch (CodeString(MoveDirection))
@@ -58,26 +61,22 @@ void Entity::MovePosition(float speed, std::string MoveDirection) {
 		break;
 	case 10:
 		for (int a = 1; a < LongitudArray(); a += 2) {
-			positions[a] += speed;
-			scaleBase[a] += speed;
+			position->y += speed;
 		}
 		break;
 	case 11:
 		for (int a = 1; a < LongitudArray(); a += 2) {
-			positions[a] -= speed;
-			scaleBase[a] -= speed;
+			position->y -= speed;
 		}
 		break;
 	case 12:
 		for (int a = 0; a < LongitudArray(); a += 2) {
-			positions[a] -= speed;
-			scaleBase[a] -= speed;
+			position->x -= speed;
 		}
 		break;
 	case 13:
 		for (int a = 0; a < LongitudArray(); a += 2) {
-			positions[a] += speed;
-			scaleBase[a] += speed;
+			position->x += speed;
 		}
 		break;
 	default:
@@ -98,14 +97,21 @@ void Entity::DrawTriangle() {
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
 
+	glm::mat4 ModelMatrix(1.f);
+	ModelMatrix = glm::translate(ModelMatrix, *position);
+	ModelMatrix = glm::rotate(ModelMatrix,glm::radians(rotationX), glm::vec3(1.f, 0.f, 0.f));
+	ModelMatrix = glm::rotate(ModelMatrix, glm::radians(rotationY), glm::vec3(0.f, 1.f, 0.f));
+	ModelMatrix = glm::rotate(ModelMatrix, glm::radians(rotationZ), glm::vec3(0.f, 0.f, 1.f));
+	ModelMatrix = glm::scale(ModelMatrix, glm::vec3(scale));
 	std::string vertexShader =
 		"#version 330 core\n"
 		"\n"
-		"layout(location = 0) in vec4 position;\n"
+		"layout(location = 0) in vec3 position;\n"
+		"uniform mat4 ModelMatrix;\n"
 		"\n"
 		"void main()\n"
 		"{\n"
-		"   gl_Position = position;\n"
+		"   gl_Position = ModelMatrix * vec4(position, 1.f);\n"
 		"}\n";
 	std::string fragmentShader =
 		"#version 330 core\n"
@@ -117,8 +123,11 @@ void Entity::DrawTriangle() {
 		"   color = vec4(0.5,0.0,0.0,1.0);\n"
 		"}\n";
 
+	
+
 	unsigned int shader = CreateShader(vertexShader, fragmentShader);
 	glUseProgram(shader);
+	glUniformMatrix4fv(glGetUniformLocation(shader, "ModelMatrix"),1,GL_FALSE, glm::value_ptr(ModelMatrix));
 }
 unsigned int Entity::CreateShader(const std::string& vertexShader, const std::string& fragmentShader) {
 	unsigned int program = glCreateProgram();

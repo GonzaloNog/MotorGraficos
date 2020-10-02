@@ -33,11 +33,25 @@ void Game::Loop() {
 			std::cout << "W press" << std::endl;
 		}
 		if (GetKay("q", "Press")) {
-			ScaleEntity(0.5);
+			//ScaleEntity(0.5);
+			ModifyScaleEntity(0.005);
 			std::cout << "W press" << std::endl;
 		}
 		if (GetKay("e", "Press")) {
-			ScaleEntity(2);
+			//ScaleEntity(2);
+			ModifyScaleEntity(-0.005);
+			std::cout << "W press" << std::endl;
+		}
+		if (GetKay("1", "Press")) {
+			RotationXEntity(0.5f);
+			std::cout << "W press" << std::endl;
+		}
+		if (GetKay("2", "Press")) {
+			RotationYEntity(0.5f);
+			std::cout << "W press" << std::endl;
+		}
+		if (GetKay("3", "Press")) {
+			RotationZEntity(0.5f);
 			std::cout << "W press" << std::endl;
 		}
 	}

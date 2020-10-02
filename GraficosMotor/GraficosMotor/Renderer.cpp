@@ -24,9 +24,21 @@ void Renderer::MoveEntity(float speed, std::string moveDirection) {
 void Renderer::ScaleEntity(float scale) {
 	ent->Scale(scale);
 }
+void Renderer::ModifyScaleEntity(float scale) {
+	ent->ModifyScale(scale);
+}
+void Renderer::RotationXEntity(float _angle) {
+	ent->RotationX(_angle);
+}
+void Renderer::RotationYEntity(float _angle) {
+	ent->RotationY(_angle);
+}
+void Renderer::RotationZEntity(float _angle) {
+	ent->RotationZ(_angle);
+}
 void Renderer::UpdateWindow(GLFWwindow* win){
 	ent->Draw("Triangle");
-	ent->Rotation("x", 60);
+	//ent->Rotation("x", 60);
 	glClearColor(color[0], color[1], color[2], color[3]);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glDrawArrays(GL_TRIANGLES, 0, 3);

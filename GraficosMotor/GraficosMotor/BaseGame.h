@@ -26,6 +26,10 @@ public:
 	//Render
 	void MoveEntity(float speed, std::string moveDirection);
 	void ScaleEntity(float scale);
+	void ModifyScaleEntity(float scale);
+	void RotationXEntity(float _angle);
+	void RotationYEntity(float _angle);
+	void RotationZEntity(float _angle);
 	void SetColorBackground(float a, float b, float c);//Le pide a la clase Windows que cambia el color del fondo 
 	void SetColorBackground(float a, float b, float c, float d);// Le pide a la clase Windows que cambia el color de fondo y el alpha
 	void UpdateWindow();
