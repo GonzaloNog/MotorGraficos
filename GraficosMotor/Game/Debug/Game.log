@@ -1,8 +1,8 @@
 ﻿  Game.cpp
-<<<<<<< Updated upstream
-  Game.vcxproj -> C:\Users\Usuario\Desktop\ZeissGonzaloMotorGraficos\MotorGraficos\GraficosMotor\Debug\Game.exe
-=======
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\Game.cpp(20,25): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\Game.cpp(24,28): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\Game.cpp(28,28): warning C4305: 'argumento': truncamiento de 'double' a 'float'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\Game.cpp(32,29): warning C4305: 'argumento': truncamiento de 'double' a 'float'
   Main.cpp
   Generando código...
   Game.vcxproj -> C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Debug\Game.exe
->>>>>>> Stashed changes

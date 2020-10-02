@@ -36,6 +36,18 @@ int Entity::CodeString(std::string figure) {
 void Entity::TrasformPosition(float pod[6]) {
 	for (int a = 0; a < LongitudArray(); a++) {
 		positions[a] = pod[a];
+		scaleBase[a] = pod[a];
+	}
+}
+void Entity::Scale(float scale) {
+	for(int a = 0; a < LongitudArray(); a++) {
+		positions[a] = scaleBase[a] * scale;
+	}
+}
+void Entity::Rotation(std::string eje, float angle) {
+	if (eje == "x") {
+		positions[2] = cos(angle) * positions[2];
+		positions[4] = sin(angle) * positions[4];
 	}
 }
 void Entity::MovePosition(float speed, std::string MoveDirection) {
@@ -47,6 +59,25 @@ void Entity::MovePosition(float speed, std::string MoveDirection) {
 	case 10:
 		for (int a = 1; a < LongitudArray(); a += 2) {
 			positions[a] += speed;
+			scaleBase[a] += speed;
+		}
+		break;
+	case 11:
+		for (int a = 1; a < LongitudArray(); a += 2) {
+			positions[a] -= speed;
+			scaleBase[a] -= speed;
+		}
+		break;
+	case 12:
+		for (int a = 0; a < LongitudArray(); a += 2) {
+			positions[a] -= speed;
+			scaleBase[a] -= speed;
+		}
+		break;
+	case 13:
+		for (int a = 0; a < LongitudArray(); a += 2) {
+			positions[a] += speed;
+			scaleBase[a] += speed;
 		}
 		break;
 	default:

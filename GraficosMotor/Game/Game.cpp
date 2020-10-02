@@ -11,15 +11,34 @@ void Game::Loop() {
 	OpenWindows(500, 500, "gonzalo");
 	std::cout << "Start Loop" << std::endl;
 	while (running) {
-<<<<<<< Updated upstream
-		UpdateWindows();
-=======
-		//DrawTriangle();
 		UpdateWindow();
->>>>>>> Stashed changes
-		if (GetKay("space")) {
+		if (GetKay("space","Press")) {
 			std::cout << "space press" << std::endl;
 			SetColorBackground(0.1f,0.7f,0.3f);
+		}
+		if (GetKay("w", "Press")) {
+			MoveEntity(0.001,"Up");
+			std::cout << "W press" << std::endl;
+		}
+		if (GetKay("s", "Press")) {
+			MoveEntity(0.001, "Down");
+			std::cout << "W press" << std::endl;
+		}
+		if (GetKay("a", "Press")) {
+			MoveEntity(0.001, "Left");
+			std::cout << "W press" << std::endl;
+		}
+		if (GetKay("d", "Press")) {
+			MoveEntity(0.001, "Right");
+			std::cout << "W press" << std::endl;
+		}
+		if (GetKay("q", "Press")) {
+			ScaleEntity(0.5);
+			std::cout << "W press" << std::endl;
+		}
+		if (GetKay("e", "Press")) {
+			ScaleEntity(2);
+			std::cout << "W press" << std::endl;
 		}
 	}
 }

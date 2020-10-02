@@ -3,11 +3,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Exports.h"
-<<<<<<< Updated upstream
-
-class ZENGINE_API Renderer
-{
-=======
 #include <iostream>
 #include "Entity.h"
 
@@ -21,8 +16,9 @@ public:
 	Renderer();
 	~Renderer();
 	void UpdateWindow(GLFWwindow* win);
+	void MoveEntity(float speed,std::string moveDirection);
+	void ScaleEntity(float scale);
 	void SetColorBackground(float a, float b, float c);//Cambia el color de la ventana
 	void setColorBackground(float a, float b, float c, float d);//Cambia el color y el alpha de la ventana
->>>>>>> Stashed changes
 };
 
