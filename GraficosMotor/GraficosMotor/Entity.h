@@ -5,7 +5,6 @@
 #include <stdlib.h>
 #include "Exports.h"
 #include <iostream>
-#include <math.h>
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
@@ -27,7 +26,7 @@ protected:
 public:
 	Entity();
 	~Entity();
-	void Draw(std::string figure);
+	void Draw(std::string figure, glm::mat4 camera);
 	void TrasformPosition(float pos[6]);
 	void MovePosition(float Speed, std::string MoveDirection);
 	void RotationX(float angle);
@@ -39,7 +38,7 @@ public:
 	static unsigned int CompileShader(const std::string& source, unsigned int type);
 private:
 	int CodeString(std::string code);
-	void DrawTriangle();
+	void DrawTriangle(glm::mat4 camera);
 	int LongitudArray();
 };
 

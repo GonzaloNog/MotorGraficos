@@ -1,88 +1,35 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(477,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
-  BaseGame.cpp
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(4,22): warning C4273: 'BaseGame::BaseGame': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(21,2): message : vea la definición anterior de '{ctor}'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(7,23): warning C4273: 'BaseGame::~BaseGame': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(22,3): message : vea la definición anterior de '{dtor}'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(11,60): warning C4273: 'BaseGame::OpenWindows': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(24,7): message : vea la definición anterior de 'OpenWindows'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(18,25): warning C4273: 'BaseGame::Update': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(25,7): message : vea la definición anterior de 'Update'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(25,62): warning C4273: 'BaseGame::SetColorBackground': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(33,7): message : vea la definición anterior de 'SetColorBackground'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(28,71): warning C4273: 'BaseGame::SetColorBackground': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(34,7): message : vea la definición anterior de 'SetColorBackground'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(31,31): warning C4273: 'BaseGame::UpdateWindow': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(35,7): message : vea la definición anterior de 'UpdateWindow'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(34,67): warning C4273: 'BaseGame::MoveEntity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(27,7): message : vea la definición anterior de 'MoveEntity'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(37,41): warning C4273: 'BaseGame::ScaleEntity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(28,7): message : vea la definición anterior de 'ScaleEntity'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(40,47): warning C4273: 'BaseGame::ModifyScaleEntity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(29,7): message : vea la definición anterior de 'ModifyScaleEntity'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(43,46): warning C4273: 'BaseGame::RotationXEntity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(30,7): message : vea la definición anterior de 'RotationXEntity'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(46,46): warning C4273: 'BaseGame::RotationYEntity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(31,7): message : vea la definición anterior de 'RotationYEntity'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(49,46): warning C4273: 'BaseGame::RotationZEntity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(32,7): message : vea la definición anterior de 'RotationZEntity'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.cpp(54,59): warning C4273: 'BaseGame::GetKay': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\BaseGame.h(37,7): message : vea la definición anterior de 'GetKay'
   Entity.cpp
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(3,18): warning C4273: 'Entity::Entity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(28,2): message : vea la definición anterior de '{ctor}'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(27,2): message : vea la definición anterior de '{ctor}'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(6,19): warning C4273: 'Entity::~Entity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(29,3): message : vea la definición anterior de '{dtor}'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(9,39): warning C4273: 'Entity::Draw': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(30,7): message : vea la definición anterior de 'Draw'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(28,3): message : vea la definición anterior de '{dtor}'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(9,57): warning C4273: 'Entity::Draw': vinculación de DLL incoherente
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(29,7): message : vea la definición anterior de 'Draw'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(22,44): warning C4273: 'Entity::CodeString': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(41,6): message : vea la definición anterior de 'CodeString'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(40,6): message : vea la definición anterior de 'CodeString'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(36,45): warning C4273: 'Entity::TrasformPosition': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(31,7): message : vea la definición anterior de 'TrasformPosition'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(30,7): message : vea la definición anterior de 'TrasformPosition'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(41,34): warning C4273: 'Entity::Scale': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(36,7): message : vea la definición anterior de 'Scale'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(35,7): message : vea la definición anterior de 'Scale'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(44,40): warning C4273: 'Entity::ModifyScale': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(37,7): message : vea la definición anterior de 'ModifyScale'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(36,7): message : vea la definición anterior de 'ModifyScale'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(47,37): warning C4273: 'Entity::RotationX': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(33,7): message : vea la definición anterior de 'RotationX'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(32,7): message : vea la definición anterior de 'RotationX'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(50,37): warning C4273: 'Entity::RotationY': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(34,7): message : vea la definición anterior de 'RotationY'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(33,7): message : vea la definición anterior de 'RotationY'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(53,37): warning C4273: 'Entity::RotationZ': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(35,7): message : vea la definición anterior de 'RotationZ'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(34,7): message : vea la definición anterior de 'RotationZ'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(56,67): warning C4273: 'Entity::MovePosition': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(32,7): message : vea la definición anterior de 'MovePosition'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(31,7): message : vea la definición anterior de 'MovePosition'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(86,29): warning C4273: 'Entity::LongitudArray': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(43,6): message : vea la definición anterior de 'LongitudArray'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(89,29): warning C4273: 'Entity::DrawTriangle': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(42,7): message : vea la definición anterior de 'DrawTriangle'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(132,103): warning C4273: 'Entity::CreateShader': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(38,22): message : vea la definición anterior de 'CreateShader'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(147,82): warning C4273: 'Entity::CompileShader': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(39,22): message : vea la definición anterior de 'CompileShader'
-  Renderer.cpp
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.cpp(4,22): warning C4273: 'Renderer::Renderer': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(16,2): message : vea la definición anterior de '{ctor}'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.cpp(7,23): warning C4273: 'Renderer::~Renderer': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(17,3): message : vea la definición anterior de '{dtor}'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.cpp(10,62): warning C4273: 'Renderer::SetColorBackground': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(25,7): message : vea la definición anterior de 'SetColorBackground'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.cpp(15,71): warning C4273: 'Renderer::setColorBackground': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(26,7): message : vea la definición anterior de 'setColorBackground'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.cpp(21,67): warning C4273: 'Renderer::MoveEntity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(19,7): message : vea la definición anterior de 'MoveEntity'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.cpp(24,41): warning C4273: 'Renderer::ScaleEntity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(20,7): message : vea la definición anterior de 'ScaleEntity'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.cpp(27,47): warning C4273: 'Renderer::ModifyScaleEntity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(21,7): message : vea la definición anterior de 'ModifyScaleEntity'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.cpp(30,46): warning C4273: 'Renderer::RotationXEntity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(22,7): message : vea la definición anterior de 'RotationXEntity'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.cpp(33,46): warning C4273: 'Renderer::RotationYEntity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(23,7): message : vea la definición anterior de 'RotationYEntity'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.cpp(36,46): warning C4273: 'Renderer::RotationZEntity': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(24,7): message : vea la definición anterior de 'RotationZEntity'
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.cpp(39,45): warning C4273: 'Renderer::UpdateWindow': vinculación de DLL incoherente
-C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(18,7): message : vea la definición anterior de 'UpdateWindow'
-  Generando código...
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(42,6): message : vea la definición anterior de 'LongitudArray'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(89,45): warning C4273: 'Entity::DrawTriangle': vinculación de DLL incoherente
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(41,7): message : vea la definición anterior de 'DrawTriangle'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(133,103): warning C4273: 'Entity::CreateShader': vinculación de DLL incoherente
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(37,22): message : vea la definición anterior de 'CreateShader'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(148,82): warning C4273: 'Entity::CompileShader': vinculación de DLL incoherente
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(38,22): message : vea la definición anterior de 'CompileShader'
      Creando biblioteca C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\GraficosMotor.lib y objeto C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\GraficosMotor.exp
 LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
 LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
@@ -104,7 +51,7 @@ LINK : warning LNK4217: "?RotationZEntity@Renderer@@QAEXM@Z (public: void __this
 LINK : warning LNK4217: "?SetColorBackground@Renderer@@QAEXMMM@Z (public: void __thiscall Renderer::SetColorBackground(float,float,float))" importa el símbolo "Renderer.obj" definido en "BaseGame.obj" en la función ""public: void __thiscall BaseGame::SetColorBackground(float,float,float)" (?SetColorBackground@BaseGame@@QAEXMMM@Z)"
 LINK : warning LNK4217: "?setColorBackground@Renderer@@QAEXMMMM@Z (public: void __thiscall Renderer::setColorBackground(float,float,float,float))" importa el símbolo "Renderer.obj" definido en "BaseGame.obj" en la función ""public: void __thiscall BaseGame::SetColorBackground(float,float,float,float)" (?SetColorBackground@BaseGame@@QAEXMMMM@Z)"
 LINK : warning LNK4217: "??0Entity@@QAE@XZ (public: __thiscall Entity::Entity(void))" importa el símbolo "Entity.obj" definido en "Renderer.obj" en la función ""public: __thiscall Renderer::Renderer(void)" (??0Renderer@@QAE@XZ)"
-LINK : warning LNK4217: "?Draw@Entity@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z (public: void __thiscall Entity::Draw(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >))" importa el símbolo "Entity.obj" definido en "Renderer.obj" en la función ""public: void __thiscall Renderer::UpdateWindow(struct GLFWwindow *)" (?UpdateWindow@Renderer@@QAEXPAUGLFWwindow@@@Z)"
+LINK : warning LNK4217: "?Draw@Entity@@QAEXV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@U?$mat@$03$03M$0A@@glm@@@Z (public: void __thiscall Entity::Draw(class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >,struct glm::mat<4,4,float,0>))" importa el símbolo "Entity.obj" definido en "Renderer.obj" en la función ""public: void __thiscall Renderer::UpdateWindow(struct GLFWwindow *)" (?UpdateWindow@Renderer@@QAEXPAUGLFWwindow@@@Z)"
 LINK : warning LNK4217: "?MovePosition@Entity@@QAEXMV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z (public: void __thiscall Entity::MovePosition(float,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >))" importa el símbolo "Entity.obj" definido en "Renderer.obj" en la función ""public: void __thiscall Renderer::MoveEntity(float,class std::basic_string<char,struct std::char_traits<char>,class std::allocator<char> >)" (?MoveEntity@Renderer@@QAEXMV?$basic_string@DU?$char_traits@D@std@@V?$allocator@D@2@@std@@@Z)"
 LINK : warning LNK4217: "?RotationX@Entity@@QAEXM@Z (public: void __thiscall Entity::RotationX(float))" importa el símbolo "Entity.obj" definido en "Renderer.obj" en la función ""public: void __thiscall Renderer::RotationXEntity(float)" (?RotationXEntity@Renderer@@QAEXM@Z)"
 LINK : warning LNK4217: "?RotationY@Entity@@QAEXM@Z (public: void __thiscall Entity::RotationY(float))" importa el símbolo "Entity.obj" definido en "Renderer.obj" en la función ""public: void __thiscall Renderer::RotationYEntity(float)" (?RotationYEntity@Renderer@@QAEXM@Z)"

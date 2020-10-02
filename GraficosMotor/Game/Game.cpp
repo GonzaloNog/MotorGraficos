@@ -8,7 +8,7 @@ Game::~Game() {
 }
 void Game::Loop() {
 	std::cout << "Open Windows"<<std::endl;
-	OpenWindows(500, 500, "gonzalo");
+	OpenWindows(800, 600, "gonzalo");
 	std::cout << "Start Loop" << std::endl;
 	while (running) {
 		UpdateWindow();

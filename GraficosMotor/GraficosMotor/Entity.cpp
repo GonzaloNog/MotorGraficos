@@ -6,7 +6,7 @@ Entity::Entity() {
 Entity::~Entity() {
 
 }
-void Entity::Draw(std::string figure) {
+void Entity::Draw(std::string figure, glm::mat4 camera) {
 
 	switch (CodeString(figure))
 	{
@@ -14,7 +14,7 @@ void Entity::Draw(std::string figure) {
 		std::cout << "Error el codigo que uso no tiene una definicion";
 		break;
 	case 1:
-		DrawTriangle();
+		DrawTriangle(camera);
 	default:
 		break;
 	}
@@ -86,7 +86,7 @@ void Entity::MovePosition(float speed, std::string MoveDirection) {
 int Entity::LongitudArray() {
 	return sizeof(positions) / sizeof(*positions);
 }
-void Entity::DrawTriangle() {
+void Entity::DrawTriangle(glm::mat4 camera) {
 	unsigned int buffer;
 	glGenBuffers(1, &buffer);
 	glBindBuffer(GL_ARRAY_BUFFER, buffer);
@@ -103,6 +103,7 @@ void Entity::DrawTriangle() {
 	ModelMatrix = glm::rotate(ModelMatrix, glm::radians(rotationY), glm::vec3(0.f, 1.f, 0.f));
 	ModelMatrix = glm::rotate(ModelMatrix, glm::radians(rotationZ), glm::vec3(0.f, 0.f, 1.f));
 	ModelMatrix = glm::scale(ModelMatrix, glm::vec3(scale));
+	//ModelMatrix = ModelMatrix * camera;
 	std::string vertexShader =
 		"#version 330 core\n"
 		"\n"
