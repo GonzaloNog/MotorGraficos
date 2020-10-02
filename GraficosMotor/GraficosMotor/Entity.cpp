@@ -103,7 +103,7 @@ void Entity::DrawTriangle(glm::mat4 camera) {
 	ModelMatrix = glm::rotate(ModelMatrix, glm::radians(rotationY), glm::vec3(0.f, 1.f, 0.f));
 	ModelMatrix = glm::rotate(ModelMatrix, glm::radians(rotationZ), glm::vec3(0.f, 0.f, 1.f));
 	ModelMatrix = glm::scale(ModelMatrix, glm::vec3(scale));
-	//ModelMatrix = ModelMatrix * camera;
+	//ModelMatrix = camera * ModelMatrix;
 	std::string vertexShader =
 		"#version 330 core\n"
 		"\n"
