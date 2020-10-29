@@ -12,17 +12,22 @@
 class ZENGINE_API BaseGame
 {
 private:
-
+	
 protected:
 	Windows* window;//puntero de la clase de windows
 	Input* input;
 	Renderer* rend;
+
+	virtual void Start() = 0;
+	virtual void Update() = 0;
+	virtual void Delete() = 0;
 public:
 	BaseGame();
 	~BaseGame();
+	
 	//Windows
 	void OpenWindows(int x, int y, std::string name);//Le pide a la clase Windows que cree una ventana
-	void Update();//Update del motor
+	void Play();//Inicia el motors
 	//Render
 	void MoveEntity(float speed, std::string moveDirection);
 	void ScaleEntity(float scale);

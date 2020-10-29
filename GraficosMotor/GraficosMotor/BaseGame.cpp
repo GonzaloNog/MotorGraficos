@@ -5,8 +5,15 @@ BaseGame::BaseGame() {
 
 }
 BaseGame::~BaseGame() {
-	
+
 }
+void BaseGame::Play() {
+	Start();
+	while (window->IsOpen()) {
+		Update();
+	}
+	Delete();
+}	
 // WIDNOWS
 void BaseGame::OpenWindows(int x, int y, std::string name) {
 	window = new Windows();
@@ -15,11 +22,7 @@ void BaseGame::OpenWindows(int x, int y, std::string name) {
 	rend = new Renderer();
 	input->Initialize(window->GetWindows());
 }
-void BaseGame::Update() {
-	while (window->IsOpen()) {
 
-	}
-}
 
 // RENDERER
 void BaseGame::SetColorBackground(float a, float b, float c) {

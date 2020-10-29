@@ -70,7 +70,7 @@
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
-    <OutDir>C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game</OutDir>
+    <OutDir>$(SolutionDir)Game</OutDir>
     <IntDir>$(ProyectDir)obj\$(Configuration)\</IntDir>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -142,6 +142,7 @@
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Renderer.cpp" />
+    <ClCompile Include="Testeo.cpp" />
     <ClCompile Include="Windows.cpp" />
   </ItemGroup>
   <ItemGroup>
@@ -150,6 +151,7 @@
     <ClInclude Include="Exports.h" />
     <ClInclude Include="Input.h" />
     <ClInclude Include="Renderer.h" />
+    <ClInclude Include="Testeo.h" />
     <ClInclude Include="Windows.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
