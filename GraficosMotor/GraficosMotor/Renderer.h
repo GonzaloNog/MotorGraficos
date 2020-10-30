@@ -31,6 +31,7 @@ public:
 	void RotationZEntity(float _angle);
 	void SetColorBackground(float a, float b, float c);//Cambia el color de la ventana
 	void setColorBackground(float a, float b, float c, float d);//Cambia el color y el alpha de la ventana
+	void FreeMemory();
 	//Camera
 	void ConfigCamera();
 

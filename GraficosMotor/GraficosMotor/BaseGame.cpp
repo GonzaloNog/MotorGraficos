@@ -7,6 +7,13 @@ BaseGame::BaseGame() {
 BaseGame::~BaseGame() {
 
 }
+void BaseGame::FreeMemory() {
+	window->FreeMemory();
+	delete window;
+	rend->FreeMemory();
+	delete rend;
+	delete input;
+}
 void BaseGame::Play() {
 	Start();
 	while (window->IsOpen()) {
@@ -21,6 +28,9 @@ void BaseGame::OpenWindows(int x, int y, std::string name) {
 	input = new Input();
 	rend = new Renderer();
 	input->Initialize(window->GetWindows());
+}
+void BaseGame::CloseWindow() {
+	window->Close();
 }
 
 

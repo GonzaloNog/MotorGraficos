@@ -36,6 +36,7 @@ public:
 	void ModifyScale(float _scale);
 	static unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader);
 	static unsigned int CompileShader(const std::string& source, unsigned int type);
+	void FreeMemory();
 private:
 	int CodeString(std::string code);
 	void DrawTriangle(glm::mat4 camera);

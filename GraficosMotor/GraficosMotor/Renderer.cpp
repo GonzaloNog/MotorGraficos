@@ -7,6 +7,9 @@ Renderer::Renderer() {
 Renderer::~Renderer() {
 
 }
+void Renderer::FreeMemory() {
+	delete ent;
+}
 void Renderer::SetColorBackground(float a, float b, float c) {
 	color[0] = a;
 	color[1] = b;

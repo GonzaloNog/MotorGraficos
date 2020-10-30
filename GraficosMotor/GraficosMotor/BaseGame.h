@@ -28,6 +28,7 @@ public:
 	//Windows
 	void OpenWindows(int x, int y, std::string name);//Le pide a la clase Windows que cree una ventana
 	void Play();//Inicia el motors
+	void CloseWindow();
 	//Render
 	void MoveEntity(float speed, std::string moveDirection);
 	void ScaleEntity(float scale);
@@ -37,6 +38,7 @@ public:
 	void RotationZEntity(float _angle);
 	void SetColorBackground(float a, float b, float c);//Le pide a la clase Windows que cambia el color del fondo 
 	void SetColorBackground(float a, float b, float c, float d);// Le pide a la clase Windows que cambia el color de fondo y el alpha
+	void FreeMemory();
 	void UpdateWindow();
 	//Input
 	bool GetKay(std::string _kay,std::string tipe);

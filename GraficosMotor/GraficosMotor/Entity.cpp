@@ -6,6 +6,9 @@ Entity::Entity() {
 Entity::~Entity() {
 
 }
+void Entity::FreeMemory() {
+	delete position;
+}
 void Entity::Draw(std::string figure, glm::mat4 camera) {
 
 	switch (CodeString(figure))

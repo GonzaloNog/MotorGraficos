@@ -12,13 +12,16 @@ void Game::Start() {
 	std::cout << "Start Loop" << std::endl;
 }
 void Game::Delete() {
-	std::cout << "hola";
+	FreeMemory();
 }
 void Game::Update() {
 	UpdateWindow();
 	if (GetKay("space", "Press")) {
 		std::cout << "space press" << std::endl;
 		SetColorBackground(0.1f, 0.7f, 0.3f);
+	}
+	if (GetKay("esc", "Press")) {
+		CloseWindow();
 	}
 	if (GetKay("w", "Press")) {
 		MoveEntity(0.001, "Up");

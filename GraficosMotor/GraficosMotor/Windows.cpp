@@ -6,6 +6,9 @@ Windows::Windows() {
 Windows::~Windows() {
 
 }
+void Windows::FreeMemory() {
+
+}
 void Windows::Open(int x, int y, std::string name) {
 	glewExperimental = true; // Needed for core profile
 	if (!glfwInit())
@@ -30,6 +33,9 @@ bool Windows::IsOpen() {
 	else {
 		return false;
 	}
+}
+void Windows::Close() {
+	glfwSetWindowShouldClose(window, GLFW_TRUE);
 }
 GLFWwindow* Windows::GetWindows() {
 	return window;

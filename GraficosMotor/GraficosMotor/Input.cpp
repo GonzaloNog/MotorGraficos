@@ -179,5 +179,22 @@ bool Input::PressedKey(std::string keyCode, std::string tipe) {
 			}
 		}
 	}
+	if (keyCode == "esc") {
+		if (tipe == "Release") {
+			if (glfwGetKey(wind, GLFW_KEY_ESCAPE) == GLFW_RELEASE) {
+				return true;
+			}
+		}
+		if (tipe == "Press") {
+			if (glfwGetKey(wind, GLFW_KEY_ESCAPE) == GLFW_PRESS) {
+				return true;
+			}
+		}
+		if (tipe == "Repeat") {
+			if (glfwGetKey(wind, GLFW_KEY_ESCAPE) == GLFW_REPEAT) {
+				return true;
+			}
+		}
+	}
 	return false;
 }

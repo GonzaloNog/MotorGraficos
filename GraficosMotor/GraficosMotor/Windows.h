@@ -16,6 +16,8 @@ public:
 	~Windows();
 	void Open(int x, int y, std::string name);//Crea una ventana nueva con GLFW
 	bool IsOpen();//Comprueba si la ventana esta abierta 
+	void FreeMemory();
+	void Close();
 	GLFWwindow* GetWindows();
 };
 
