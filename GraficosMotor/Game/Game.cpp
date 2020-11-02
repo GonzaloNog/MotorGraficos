@@ -24,19 +24,19 @@ void Game::Update() {
 		CloseWindow();
 	}
 	if (GetKay("w", "Press")) {
-		MoveEntity(0.001, "Up");
+		MoveEntity(0.01, "Up");
 		std::cout << "W press" << std::endl;
 	}
 	if (GetKay("s", "Press")) {
-		MoveEntity(0.001, "Down");
+		MoveEntity(0.01, "Down");
 		std::cout << "W press" << std::endl;
 	}
 	if (GetKay("a", "Press")) {
-		MoveEntity(0.001, "Left");
+		MoveEntity(0.01, "Left");
 		std::cout << "W press" << std::endl;
 	}
 	if (GetKay("d", "Press")) {
-		MoveEntity(0.001, "Right");
+		MoveEntity(0.01, "Right");
 		std::cout << "W press" << std::endl;
 	}
 	if (GetKay("q", "Press")) {
@@ -50,15 +50,15 @@ void Game::Update() {
 		std::cout << "W press" << std::endl;
 	}
 	if (GetKay("1", "Press")) {
-		RotationXEntity(0.5f);
+		RotationXEntity(5.5f);
 		std::cout << "W press" << std::endl;
 	}
 	if (GetKay("2", "Press")) {
-		RotationYEntity(0.5f);
+		RotationYEntity(5.5f);
 		std::cout << "W press" << std::endl;
 	}
 	if (GetKay("3", "Press")) {
-		RotationZEntity(0.5f);
+		RotationZEntity(5.5f);
 		std::cout << "W press" << std::endl;
 	}
 }

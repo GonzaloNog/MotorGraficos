@@ -8,14 +8,18 @@
 #include <glm/glm.hpp>
 #include <glm/gtx/transform.hpp>
 #include <glm/gtc/type_ptr.hpp>
+#include "Material.h"
+#include "stb_image.h"
 
 class ZENGINE_API Entity
 {
 protected:
-	float positions[6] = {
-		-0.5f, -0.5f, 
-		0.0f,0.5f,
-		0.5f,-0.5f
+	Material * material;
+	float positions[32] = {
+		 0.5f,  0.5f, 0.0f,   1.0f, 0.0f, 0.0f,   1.0f, 1.0f,   
+		 0.5f, -0.5f, 0.0f,   0.0f, 1.0f, 0.0f,   1.0f, 0.0f,   
+		-0.5f, -0.5f, 0.0f,   0.0f, 0.0f, 1.0f,   0.0f, 0.0f,   
+		-0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 0.0f,   0.0f, 1.0f    
 	};
 	glm::vec3 * position = new glm::vec3(0.0f, 0.0f, 0.0f);
 	float rotationX = 0.f;
@@ -26,7 +30,8 @@ protected:
 public:
 	Entity();
 	~Entity();
-	void Draw(std::string figure, glm::mat4 camera);
+	void Draw(glm::mat4 camera, GLFWwindow* win);
+    virtual void Draw(std::string figure, glm::mat4 camera);
 	void TrasformPosition(float pos[6]);
 	void MovePosition(float Speed, std::string MoveDirection);
 	void RotationX(float angle);
@@ -37,9 +42,9 @@ public:
 	static unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader);
 	static unsigned int CompileShader(const std::string& source, unsigned int type);
 	void FreeMemory();
-private:
-	int CodeString(std::string code);
-	void DrawTriangle(glm::mat4 camera);
 	int LongitudArray();
+	virtual int CodeString(std::string code);
+	void AddComponent(std::string comp);
+	
 };
 

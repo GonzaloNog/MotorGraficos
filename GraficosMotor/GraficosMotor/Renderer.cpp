@@ -41,13 +41,14 @@ void Renderer::RotationZEntity(float _angle) {
 }
 void Renderer::UpdateWindow(GLFWwindow* win){
 	ConfigCamera();
-	ent->Draw("Triangle", MVPmatrix);
+	ent->Draw(MVPmatrix, win);
 	//ent->Rotation("x", 60);
+	/*
 	glClearColor(color[0], color[1], color[2], color[3]);
 	glClear(GL_COLOR_BUFFER_BIT);
 	glDrawArrays(GL_TRIANGLES, 0, 3);
 	glfwSwapBuffers(win);
-	glfwPollEvents();
+	glfwPollEvents();*/
 }
 void Renderer::ConfigCamera() {
 	ViewMatrix = glm::translate(glm::mat4(), glm::vec3(0.0f, 0.0f, 3.0f));
