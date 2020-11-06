@@ -1,3 +1,38 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(477,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
+  BaseGame.cpp
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(17,22): warning C4251: 'Renderer::ViewMatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(18,24): warning C4251: 'Renderer::CameraMatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(19,28): warning C4251: 'Renderer::projectionMatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(20,21): warning C4251: 'Renderer::MVPmatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Material.h(17,27): warning C4251: 'Material::currentSprite': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Material'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(4564): message : vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
   Entity.cpp
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(17,22): warning C4251: 'Renderer::ViewMatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(18,24): warning C4251: 'Renderer::CameraMatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(19,28): warning C4251: 'Renderer::projectionMatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(20,21): warning C4251: 'Renderer::MVPmatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Material.h(17,27): warning C4251: 'Material::currentSprite': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Material'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(4564): message : vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(174,9): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(176,9): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+  Shape.cpp
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(17,22): warning C4251: 'Renderer::ViewMatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(18,24): warning C4251: 'Renderer::CameraMatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(19,28): warning C4251: 'Renderer::projectionMatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(20,21): warning C4251: 'Renderer::MVPmatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Material.h(17,27): warning C4251: 'Material::currentSprite': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Material'
+C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(4564): message : vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+  Generando código...
   GraficosMotor.vcxproj -> C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\GraficosMotor.dll

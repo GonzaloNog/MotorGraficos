@@ -3,7 +3,9 @@
 
 class Game : public BaseGame
 {
-private:
+protected:
+	Entity* player;
+	Entity* player2;
 public:
 	Game();
 	~Game();

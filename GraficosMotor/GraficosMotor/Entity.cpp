@@ -3,6 +3,13 @@
 Entity::Entity() {
 
 }
+Entity::Entity(Renderer * rend) {
+	ren = rend;
+}
+Entity::Entity(float x, float y,Renderer * rend) {
+	ren = rend;
+	AspectRatio(x, y);
+}
 Entity::~Entity() {
 
 }
@@ -11,11 +18,13 @@ void Entity::FreeMemory() {
 	if (material != NULL)
 		delete material;
 }
-void Entity::Draw(glm::mat4 camera, GLFWwindow* win) {
+void Entity::Draw() {
 	unsigned int indices[]{
 		0, 1, 3,
 		1, 2, 3
 	};
+	glEnable(GL_BLEND);
+	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	unsigned int buffer, VAO, EBO;
 
 	glGenVertexArrays(1, &VAO);
@@ -30,28 +39,9 @@ void Entity::Draw(glm::mat4 camera, GLFWwindow* win) {
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-	unsigned int texture;
-	glGenTextures(1, &texture);
-	glBindTexture(GL_TEXTURE_2D, texture);
-	// set the texture wrapping/filtering options (on the currently bound texture object)
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
-	// load and generate the texture
-	stbi_set_flip_vertically_on_load(true); 
-	int width, height, nrChannels;
-	unsigned char* data = stbi_load("img1.jpg", &width, &height, &nrChannels, 0);
-	if (data)
-	{
-		glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, width, height, 0, GL_RGB, GL_UNSIGNED_BYTE, data);
-		glGenerateMipmap(GL_TEXTURE_2D);
-	}
-	else
-	{
-		std::cout << "Failed to load texture" << std::endl;
-	}
-	stbi_image_free(data);
+	if(material != NULL)
+		material->Bild();
+	
 
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
@@ -97,21 +87,22 @@ void Entity::Draw(glm::mat4 camera, GLFWwindow* win) {
 		"uniform sampler2D ourTexture;\n"
 		"void main()\n"
 		"{\n"
-		"   FragColor = texture(ourTexture, TexCoord);\n"
+		"if(1 == 1)\n"
+		"{\n"
+		"   FragColor = texture(ourTexture, TexCoord) * vec4(ourColor, 1.0);\n"
+		"}\n"
+		"else\n"
+		"{\n"
+		"	FragColor = vec4(ourColor, 1.0);\n"
+		"}\n"
 		"}\n";
-	glClearColor(0.2f,0.3f,0.3f,1.0f);
-	glClear(GL_COLOR_BUFFER_BIT);
-
-	glBindTexture(GL_TEXTURE_2D, texture);
 
 	unsigned int shader = CreateShader(vertexShader, fragmentShader);
 	glUseProgram(shader);
 	glUniformMatrix4fv(glGetUniformLocation(shader, "ModelMatrix"), 1, GL_FALSE, glm::value_ptr(ModelMatrix));
 
 	glBindVertexArray(VAO);
-	glDrawElements(GL_TRIANGLES, 6, GL_UNSIGNED_INT, 0);
-	glfwSwapBuffers(win);
-	glfwPollEvents();
+	ren->Draw(6);
 }
 void Entity::Draw(std::string figure, glm::mat4 camera) {
 	//Draw(camera);
@@ -157,24 +148,16 @@ void Entity::MovePosition(float speed, std::string MoveDirection) {
 		std::cout << "Error el codigo que uso no tiene una definicion";
 		break;
 	case 10:
-		for (int a = 1; a < LongitudArray(); a += 2) {
 			position->y += speed;
-		}
 		break;
 	case 11:
-		for (int a = 1; a < LongitudArray(); a += 2) {
 			position->y -= speed;
-		}
 		break;
 	case 12:
-		for (int a = 0; a < LongitudArray(); a += 2) {
 			position->x -= speed;
-		}
 		break;
 	case 13:
-		for (int a = 0; a < LongitudArray(); a += 2) {
 			position->x += speed;
-		}
 		break;
 	default:
 		break;
@@ -182,6 +165,31 @@ void Entity::MovePosition(float speed, std::string MoveDirection) {
 }
 int Entity::LongitudArray() {
 	return sizeof(positions) / sizeof(*positions);
+}
+void Entity::AspectRatio(float x, float y) {
+	int max;
+	int aux = 0;
+	int aux2 = 1;
+	if (x > y)
+		max = x;
+	else
+		max = y;
+	while(aux < LongitudArray()) {
+		positions[aux] = positions[aux] / max;
+		std::cout << "Posicion: " + aux << std::endl;
+		if (aux % 2) {
+			positions[aux] = positions[aux] * x;
+		}
+		else
+		{
+			positions[aux] = positions[aux] * y;
+		}
+		if(aux >= aux2) {
+			aux += 6;
+			aux2 = aux + 2;
+		}
+		aux++;
+	}
 }
 unsigned int Entity::CreateShader(const std::string& vertexShader, const std::string& fragmentShader) {
 	unsigned int program = glCreateProgram();
@@ -224,4 +232,7 @@ void Entity::AddComponent(std::string comp) {
 	if (comp == "Material") {
 		material = new Material();
 	}
+}
+Material* Entity::GetMaterial() {
+	return material;
 }

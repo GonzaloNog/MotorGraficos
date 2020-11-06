@@ -26,7 +26,7 @@ void BaseGame::OpenWindows(int x, int y, std::string name) {
 	window = new Windows();
 	window->Open(x, y, name);
 	input = new Input();
-	rend = new Renderer();
+	rend = new Renderer(window->GetWindows());
 	input->Initialize(window->GetWindows());
 }
 void BaseGame::CloseWindow() {
@@ -42,7 +42,7 @@ void BaseGame::SetColorBackground(float a, float b, float c, float d) {
 	rend->setColorBackground(a,b,c,d);
 }
 void BaseGame::UpdateWindow() {
-	rend->UpdateWindow(window->GetWindows());
+	rend->UpdateWindow();
 }
 void BaseGame::MoveEntity(float speed, std::string moveDirection) {
 	rend->MoveEntity(speed, moveDirection);
@@ -61,6 +61,10 @@ void BaseGame::RotationYEntity(float _angle) {
 }
 void BaseGame::RotationZEntity(float _angle) {
 	rend->RotationZEntity(_angle);
+}
+Entity * BaseGame::NewEntity() {
+	Entity * aux = new Entity(rend);
+	return aux;
 }
 
 // INPUT

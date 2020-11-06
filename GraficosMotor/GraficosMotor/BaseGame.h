@@ -5,14 +5,12 @@
 #include "Exports.h"
 #include "Input.h"
 #include "Windows.h"
-#include "Renderer.h"
 #include <string>
 #include <iostream>
+#include "Shape.h"
 
 class ZENGINE_API BaseGame
 {
-private:
-	
 protected:
 	Windows* window;//puntero de la clase de windows
 	Input* input;
@@ -40,6 +38,7 @@ public:
 	void SetColorBackground(float a, float b, float c, float d);// Le pide a la clase Windows que cambia el color de fondo y el alpha
 	void FreeMemory();
 	void UpdateWindow();
+	Entity * NewEntity();
 	//Input
 	bool GetKay(std::string _kay,std::string tipe);
 };
