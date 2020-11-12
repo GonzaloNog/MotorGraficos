@@ -39,10 +39,13 @@ void Entity::Draw() {
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
 
-	if(material != NULL)
+	if (material != NULL) {
 		material->Bild();
-	
-
+		if (material->GetSpriteSheet()) {
+			material->GetFrame(frame);
+			SetTextCords();
+		}
+	}
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
@@ -59,7 +62,7 @@ void Entity::Draw() {
 	ModelMatrix = glm::rotate(ModelMatrix, glm::radians(rotationX), glm::vec3(1.f, 0.f, 0.f));
 	ModelMatrix = glm::rotate(ModelMatrix, glm::radians(rotationY), glm::vec3(0.f, 1.f, 0.f));
 	ModelMatrix = glm::rotate(ModelMatrix, glm::radians(rotationZ), glm::vec3(0.f, 0.f, 1.f));
-	ModelMatrix = glm::scale(ModelMatrix, glm::vec3(scale));
+	ModelMatrix = glm::scale(ModelMatrix, *scale);
 	//ModelMatrix = camera * ModelMatrix;
 	std::string vertexShader =
 		"#version 330 core\n"
@@ -127,10 +130,24 @@ void Entity::TrasformPosition(float pod[6]) {
 	}
 }
 void Entity::Scale(float _scale) {
-	scale = _scale;
+	scale->x = _scale;
+	scale->y = _scale;
+	scale->z = _scale;
 }
-void Entity::ModifyScale(float _scale) {
-	scale += _scale;
+void Entity::Scale(float x,float y, float z) {
+	scale->x = x;
+	scale->y = y;
+	scale->z = z;
+}
+void Entity::ScalePlus(float _scalePlus) {
+	scale->x += _scalePlus;
+	scale->y += _scalePlus;
+	scale->z += _scalePlus;
+}
+void Entity::ScalePlus(float xPlus, float yPlus, float zPlus) {
+	scale->x += xPlus;
+	scale->y += yPlus;
+	scale->z += zPlus;
 }
 void Entity::RotationX(float angle) {
 	rotationX += angle;
@@ -235,4 +252,18 @@ void Entity::AddComponent(std::string comp) {
 }
 Material* Entity::GetMaterial() {
 	return material;
+}
+void Entity::SetTextCords() {
+	//Primer punto (1,1)
+	positions[6] = frame[0];
+	positions[7] = frame[1];
+	//Segudno punto(0,1)
+	positions[14] = frame[2];
+	positions[15] = frame[3];
+	//TercerPunto (0,0)
+	positions[22] = frame[4];
+	positions[23] = frame[5];
+	//Cuarto punto(1,0)
+	positions[30] = frame[6];
+	positions[31] = frame[7];
 }

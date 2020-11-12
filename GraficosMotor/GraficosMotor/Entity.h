@@ -21,7 +21,9 @@ protected:
 	float rotationX = 0.f;
 	float rotationY = 0.f;
 	float rotationZ = 0.f;
-	float scale = 1.f;
+	//float scale = 1.f;
+	glm::vec3 * scale = new glm::vec3(1.0f, 1.0f, 1.0f);
+	float * frame = new float[8]{1.0f,1.0f,1.0f,0.0f,0.0f,1.0f,0.0f,0.0f};
 	//glm::mat4 * ModelMatrix =  new glm::mat4(1.f);
 public:
 	Entity();
@@ -36,7 +38,9 @@ public:
 	void RotationY(float angle);
 	void RotationZ(float angle);
 	void Scale(float _scale);
-	void ModifyScale(float _scale);
+	void Scale(float x, float y, float z);
+	void ScalePlus(float _scalePlus);
+	void ScalePlus(float xPlus, float yPlus, float zPlus);
 	void AspectRatio(float x, float y);
 	static unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader);
 	static unsigned int CompileShader(const std::string& source, unsigned int type);
@@ -45,5 +49,6 @@ public:
 	virtual int CodeString(std::string code);
 	void AddComponent(std::string comp);
 	Material* GetMaterial();
+	void SetTextCords();
 };
 

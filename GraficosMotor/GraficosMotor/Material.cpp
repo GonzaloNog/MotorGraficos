@@ -44,3 +44,47 @@ void Material::StartSprite() {
 void Material::Bild() {
 	glBindTexture(GL_TEXTURE_2D, m_MaterialId);
 }
+bool Material::GetSpriteSheet() {
+	return SpriteSheet;
+}
+void Material::SetSpriteSheet(std::string _SpriteSheet, int _x, int _y) {
+	currentSprite = _SpriteSheet;
+	SpriteSheet = true;
+	StartSprite();
+	x = _x;
+	y = _y;
+	cantFrames = x * y;
+	increaseX = 1.0f / x;
+	increaseY = 1.0f / y;
+}
+void Material::GetFrame(float* frame) {
+	int aux = idFrame;
+	int restY = 0;
+	int multX = 1;
+	while(x < aux) {
+		restY++;
+		aux -= x;
+	}
+	multX = aux;
+	//Primer punto (1,1)
+	frame[0] = 0.0f + increaseX * multX;
+	frame[1] = 0.0f + increaseY * (y - restY);
+	//Segundo putno (1,0)
+	frame[2] = 0.0f + increaseX * multX;
+	frame[3] = 0.0f + increaseY * (y - (restY + 1));
+	//tercer putno (0,0)
+	frame[4] = 0.0f + increaseX * (multX - 1);
+	frame[5] = 0.0f + increaseY * (y - (restY + 1));
+	//tercer putno (1,0)
+	frame[6] = 0.0f + increaseX * (multX - 1);
+	frame[7] = 0.0f + increaseY * (y - restY);
+}
+void Material::SetIdFrame(int id) {
+	if (id <= cantFrames)
+		idFrame = id;
+	else
+		idFrame = cantFrames;
+}
+int Material::GetIdFrame() {
+	return idFrame;
+}
