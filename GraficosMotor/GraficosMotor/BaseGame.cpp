@@ -8,6 +8,7 @@ BaseGame::~BaseGame() {
 
 }
 void BaseGame::FreeMemory() {
+	EngineUtils::Timer::Release();
 	window->FreeMemory();
 	delete window;
 	rend->FreeMemory();
@@ -70,4 +71,10 @@ Entity * BaseGame::NewEntity() {
 // INPUT
 bool BaseGame::GetKay(std::string _kay, std::string tipe) {
 	return input->PressedKey(_kay,tipe);
+}
+
+//TImer
+void BaseGame::TimeUpdate() {
+	EngineUtils::Timer::Instance()->Tick();
+	EngineUtils::Timer::Instance()->Reset();
 }

@@ -5,12 +5,15 @@
 #include <iostream>
 #include "Renderer.h"
 #include "Material.h"
+#include "Timer.h"
+#include "Animator.h"
 
 class ZENGINE_API Entity
 {
 protected:
 	Renderer* ren;
-	Material* material;
+	Material* material = nullptr;
+	Animator* anim = nullptr;
 	float positions[32] = {
 		 0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 1.0f,   1.0f, 1.0f,   
 		 0.5f, -0.5f, 0.0f,   1.0f, 1.0f, 1.0f,   1.0f, 0.0f,   
@@ -25,6 +28,13 @@ protected:
 	glm::vec3 * scale = new glm::vec3(1.0f, 1.0f, 1.0f);
 	float * frame = new float[8]{1.0f,1.0f,1.0f,0.0f,0.0f,1.0f,0.0f,0.0f};
 	//glm::mat4 * ModelMatrix =  new glm::mat4(1.f);
+	float elapsedTIme = 0.0f;
+	float frames = 0;
+	unsigned int indices[6]{
+		0, 1, 3,
+		1, 2, 3
+	};
+	unsigned int buffer, VAO, EBO;
 public:
 	Entity();
 	Entity(Renderer* ren);
@@ -42,13 +52,14 @@ public:
 	void ScalePlus(float _scalePlus);
 	void ScalePlus(float xPlus, float yPlus, float zPlus);
 	void AspectRatio(float x, float y);
-	static unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader);
+	static unsigned int CreateShader(const std::string& vertexShader, const std::string& fragmentShader, unsigned int * program);
 	static unsigned int CompileShader(const std::string& source, unsigned int type);
 	void FreeMemory();
 	int LongitudArray();
 	virtual int CodeString(std::string code);
 	void AddComponent(std::string comp);
 	Material* GetMaterial();
+	Animator* GetAnimator();
 	void SetTextCords();
 };
 

@@ -70,7 +70,8 @@ void Shape::DrawTriangle(glm::mat4 camera) {
 		"{\n"
 		"   color = vec4(0.5,0.0,0.0,1.0);\n"
 		"}\n";
-	unsigned int shader = CreateShader(vertexShader, fragmentShader);
+	unsigned int program;
+	unsigned int shader = CreateShader(vertexShader, fragmentShader, &program);
 	glUseProgram(shader);
 	glUniformMatrix4fv(glGetUniformLocation(shader, "ModelMatrix"), 1, GL_FALSE, glm::value_ptr(ModelMatrix));
 }

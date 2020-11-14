@@ -41,9 +41,9 @@ void Renderer::RotationZEntity(float _angle) {
 }
 void Renderer::UpdateWindow(){
 	ConfigCamera();
-	glfwSwapBuffers(wind);
 	glfwPollEvents();
 	glClearColor(color[0], color[1], color[2], color[3]);
+	glfwSwapBuffers(wind);
 	glClear(GL_COLOR_BUFFER_BIT);
 }
 void Renderer::ConfigCamera() {

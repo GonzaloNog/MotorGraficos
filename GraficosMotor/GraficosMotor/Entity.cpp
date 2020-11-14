@@ -1,7 +1,7 @@
 #include "Entity.h"
 
 Entity::Entity() {
-
+	
 }
 Entity::Entity(Renderer * rend) {
 	ren = rend;
@@ -14,18 +14,21 @@ Entity::~Entity() {
 
 }
 void Entity::FreeMemory() {
+	delete scale;
+	delete frame;
 	delete position;
 	if (material != NULL)
 		delete material;
+	if (anim != NULL) {
+		anim->FreeMemory();
+		delete anim;
+	}		
 }
 void Entity::Draw() {
-	unsigned int indices[]{
-		0, 1, 3,
-		1, 2, 3
-	};
+	
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
-	unsigned int buffer, VAO, EBO;
+
 
 	glGenVertexArrays(1, &VAO);
 	glGenBuffers(1, &buffer);
@@ -38,14 +41,22 @@ void Entity::Draw() {
 
 	glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, EBO);
 	glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(indices), indices, GL_STATIC_DRAW);
-
+	
 	if (material != NULL) {
 		material->Bild();
 		if (material->GetSpriteSheet()) {
+			material->SetIdFrame(anim->GetSprite());
 			material->GetFrame(frame);
 			SetTextCords();
 		}
 	}
+	/*
+	elapsedTIme += EngineUtils::Timer::Instance()->DeltaTime();
+	if (elapsedTIme >= 1.0f) {
+		frames++;
+		//std::cout << frames << std::endl;
+		elapsedTIme = 0;
+	}*/
 	glVertexAttribPointer(0, 3, GL_FLOAT, GL_FALSE, 8 * sizeof(float), (void*)0);
 	glEnableVertexAttribArray(0);
 
@@ -56,7 +67,7 @@ void Entity::Draw() {
 	glEnableVertexAttribArray(2);
 
 	glBindBuffer(GL_ARRAY_BUFFER, 0);
-
+	
 	glm::mat4 ModelMatrix(1.f);
 	ModelMatrix = glm::translate(ModelMatrix, *position);
 	ModelMatrix = glm::rotate(ModelMatrix, glm::radians(rotationX), glm::vec3(1.f, 0.f, 0.f));
@@ -100,12 +111,18 @@ void Entity::Draw() {
 		"}\n"
 		"}\n";
 
-	unsigned int shader = CreateShader(vertexShader, fragmentShader);
+	unsigned int program;
+	unsigned int shader = CreateShader(vertexShader, fragmentShader, &program);
 	glUseProgram(shader);
 	glUniformMatrix4fv(glGetUniformLocation(shader, "ModelMatrix"), 1, GL_FALSE, glm::value_ptr(ModelMatrix));
 
 	glBindVertexArray(VAO);
 	ren->Draw(6);
+	glDeleteProgram(program);
+	glDeleteBuffers(1,&buffer);
+	glDeleteBuffers(1, &EBO);
+	glDeleteVertexArrays(1,&VAO);
+	glDeleteShader(shader);
 }
 void Entity::Draw(std::string figure, glm::mat4 camera) {
 	//Draw(camera);
@@ -208,20 +225,20 @@ void Entity::AspectRatio(float x, float y) {
 		aux++;
 	}
 }
-unsigned int Entity::CreateShader(const std::string& vertexShader, const std::string& fragmentShader) {
-	unsigned int program = glCreateProgram();
+unsigned int Entity::CreateShader(const std::string& vertexShader, const std::string& fragmentShader, unsigned int* program) {
+	*program = glCreateProgram();
 	unsigned int vs = CompileShader(vertexShader, GL_VERTEX_SHADER);
 	unsigned int fs = CompileShader(fragmentShader, GL_FRAGMENT_SHADER);
 
-	glAttachShader(program, vs);
-	glAttachShader(program, fs);
-	glLinkProgram(program);
-	glValidateProgram(program);
+	glAttachShader(*program, vs);
+	glAttachShader(*program, fs);
+	glLinkProgram(*program);
+	glValidateProgram(*program);
 
 	glDeleteShader(vs);
 	glDeleteShader(fs);
 
-	return program;
+	return *program;
 }
 unsigned int Entity::CompileShader(const std::string& source, unsigned int type) {
 	unsigned int id = glCreateShader(type);
@@ -247,11 +264,19 @@ unsigned int Entity::CompileShader(const std::string& source, unsigned int type)
 //COmponents
 void Entity::AddComponent(std::string comp) {
 	if (comp == "Material") {
-		material = new Material();
+		if(material == nullptr)
+			material = new Material();
+	}
+	if (comp == "Animator") {
+		if (anim == nullptr)
+			anim = new Animator();
 	}
 }
 Material* Entity::GetMaterial() {
 	return material;
+}
+Animator* Entity::GetAnimator() {
+	return anim;
 }
 void Entity::SetTextCords() {
 	//Primer punto (1,1)

@@ -8,6 +8,8 @@
 #include <string>
 #include <iostream>
 #include "Shape.h"
+#include "Timer.h"
+//#include <vl>
 
 class ZENGINE_API BaseGame
 {
@@ -15,10 +17,13 @@ protected:
 	Windows* window;//puntero de la clase de windows
 	Input* input;
 	Renderer* rend;
-
+	//Secuencia de ejecucion
 	virtual void Start() = 0;
 	virtual void Update() = 0;
 	virtual void Delete() = 0;
+	//Timer
+	EngineUtils::Timer* timer = EngineUtils::Timer::Instance();
+
 public:
 	BaseGame();
 	~BaseGame();
@@ -41,5 +46,6 @@ public:
 	Entity * NewEntity();
 	//Input
 	bool GetKay(std::string _kay,std::string tipe);
+	void TimeUpdate();
 };
 

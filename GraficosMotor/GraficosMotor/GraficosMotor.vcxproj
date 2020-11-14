@@ -138,6 +138,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="Animation.cpp" />
+    <ClCompile Include="Animator.cpp" />
     <ClCompile Include="BaseGame.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Input.cpp" />
@@ -146,9 +148,12 @@
     <ClCompile Include="Shape.cpp" />
     <ClCompile Include="stb_image.cpp" />
     <ClCompile Include="Testeo.cpp" />
+    <ClCompile Include="Timer.cpp" />
     <ClCompile Include="Windows.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Animation.h" />
+    <ClInclude Include="Animator.h" />
     <ClInclude Include="BaseGame.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Exports.h" />
@@ -158,6 +163,7 @@
     <ClInclude Include="Shape.h" />
     <ClInclude Include="stb_image.h" />
     <ClInclude Include="Testeo.h" />
+    <ClInclude Include="Timer.h" />
     <ClInclude Include="Windows.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
