@@ -1,11 +1,11 @@
 #include "BaseGame.h"
-
+#include "Player.h"
 
 
 class Game : public BaseGame
 {
 protected:
-	Entity* player;
+	Player* player;
 	Entity* player2;
 
 	float elapsedTIme = 0.0f;

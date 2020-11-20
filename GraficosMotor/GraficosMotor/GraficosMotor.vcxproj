@@ -141,6 +141,9 @@
     <ClCompile Include="Animation.cpp" />
     <ClCompile Include="Animator.cpp" />
     <ClCompile Include="BaseGame.cpp" />
+    <ClCompile Include="BoxCollider2D.cpp" />
+    <ClCompile Include="Collider.cpp" />
+    <ClCompile Include="ColliderControler.cpp" />
     <ClCompile Include="Entity.cpp" />
     <ClCompile Include="Input.cpp" />
     <ClCompile Include="Material.cpp" />
@@ -155,6 +158,9 @@
     <ClInclude Include="Animation.h" />
     <ClInclude Include="Animator.h" />
     <ClInclude Include="BaseGame.h" />
+    <ClInclude Include="BoxCollider2D.h" />
+    <ClInclude Include="Collider.h" />
+    <ClInclude Include="ColliderControler.h" />
     <ClInclude Include="Entity.h" />
     <ClInclude Include="Exports.h" />
     <ClInclude Include="Input.h" />

@@ -74,7 +74,11 @@ bool BaseGame::GetKay(std::string _kay, std::string tipe) {
 }
 
 //TImer
-void BaseGame::TimeUpdate() {
+void BaseGame::EngineUpdate() {
 	EngineUtils::Timer::Instance()->Tick();
 	EngineUtils::Timer::Instance()->Reset();
+	EngineUtils::ColliderControler::Instance()->CalculateCollider();
+}
+Renderer* BaseGame::GetRenderer() {
+	return rend;
 }

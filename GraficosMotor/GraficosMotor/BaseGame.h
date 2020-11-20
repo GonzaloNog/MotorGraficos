@@ -9,6 +9,7 @@
 #include <iostream>
 #include "Shape.h"
 #include "Timer.h"
+#include "ColliderControler.h"
 //#include <vl>
 
 class ZENGINE_API BaseGame
@@ -23,6 +24,7 @@ protected:
 	virtual void Delete() = 0;
 	//Timer
 	EngineUtils::Timer* timer = EngineUtils::Timer::Instance();
+	EngineUtils::ColliderControler* coll = EngineUtils::ColliderControler::Instance();
 
 public:
 	BaseGame();
@@ -44,8 +46,9 @@ public:
 	void FreeMemory();
 	void UpdateWindow();
 	Entity * NewEntity();
+	Renderer* GetRenderer();
 	//Input
 	bool GetKay(std::string _kay,std::string tipe);
-	void TimeUpdate();
+	void EngineUpdate();
 };
 

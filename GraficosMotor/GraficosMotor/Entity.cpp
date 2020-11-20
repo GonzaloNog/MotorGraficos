@@ -5,6 +5,7 @@ Entity::Entity() {
 }
 Entity::Entity(Renderer * rend) {
 	ren = rend;
+	
 }
 Entity::Entity(float x, float y,Renderer * rend) {
 	ren = rend;
@@ -26,6 +27,10 @@ void Entity::FreeMemory() {
 }
 void Entity::Draw() {
 	
+	/*
+	void (Entity:: * puntero_funcion)();
+	puntero_funcion = &Entity::testeo;
+	*/
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 
@@ -45,10 +50,14 @@ void Entity::Draw() {
 	if (material != NULL) {
 		material->Bild();
 		if (material->GetSpriteSheet()) {
-			material->SetIdFrame(anim->GetSprite());
+			if(anim != NULL)
+				material->SetIdFrame(anim->GetSprite());
 			material->GetFrame(frame);
 			SetTextCords();
 		}
+	}
+	if (coll != NULL) {
+		ColliderUpdate();
 	}
 	/*
 	elapsedTIme += EngineUtils::Timer::Instance()->DeltaTime();
@@ -74,7 +83,7 @@ void Entity::Draw() {
 	ModelMatrix = glm::rotate(ModelMatrix, glm::radians(rotationY), glm::vec3(0.f, 1.f, 0.f));
 	ModelMatrix = glm::rotate(ModelMatrix, glm::radians(rotationZ), glm::vec3(0.f, 0.f, 1.f));
 	ModelMatrix = glm::scale(ModelMatrix, *scale);
-	//ModelMatrix = camera * ModelMatrix;
+	//std::cout << "X: " << position->x << " Y: " << position->y << std::endl;
 	std::string vertexShader =
 		"#version 330 core\n"
 		"\n"
@@ -82,12 +91,13 @@ void Entity::Draw() {
 		"layout(location = 1) in vec3 aColor;\n"
 		"layout(location = 2) in vec2 aTexCoord;\n"
 		"uniform mat4 ModelMatrix;\n"
+		"uniform mat4 projection;\n"
 		"out vec3 ourColor;\n"
 		"out vec2 TexCoord;\n"
 		"\n"
 		"void main()\n"
 		"{\n"
-		"   gl_Position = ModelMatrix * vec4(position, 1.f);\n"
+		"   gl_Position =  ModelMatrix * vec4(position.x,position.y,0.0, 1.f);\n"
 		"   ourColor = aColor;\n"
 		"   TexCoord = vec2(aTexCoord.x, aTexCoord.y);\n"
 		"}\n";
@@ -123,6 +133,7 @@ void Entity::Draw() {
 	glDeleteBuffers(1, &EBO);
 	glDeleteVertexArrays(1,&VAO);
 	glDeleteShader(shader);
+	
 }
 void Entity::Draw(std::string figure, glm::mat4 camera) {
 	//Draw(camera);
@@ -150,21 +161,33 @@ void Entity::Scale(float _scale) {
 	scale->x = _scale;
 	scale->y = _scale;
 	scale->z = _scale;
+	if (coll != nullptr) {
+		coll->SetScale(_scale);
+	}
 }
 void Entity::Scale(float x,float y, float z) {
 	scale->x = x;
 	scale->y = y;
 	scale->z = z;
+	if (coll != nullptr) {
+		coll->SetScale(glm::vec3(x,y,z));
+	}
 }
 void Entity::ScalePlus(float _scalePlus) {
 	scale->x += _scalePlus;
 	scale->y += _scalePlus;
 	scale->z += _scalePlus;
+	if (coll != nullptr) {
+		coll->SetScale(_scalePlus);
+	}
 }
 void Entity::ScalePlus(float xPlus, float yPlus, float zPlus) {
 	scale->x += xPlus;
 	scale->y += yPlus;
 	scale->z += zPlus;
+	if (coll != nullptr) {
+		coll->SetScale(glm::vec3(xPlus, yPlus, zPlus));
+	}
 }
 void Entity::RotationX(float angle) {
 	rotationX += angle;
@@ -175,6 +198,7 @@ void Entity::RotationY(float angle) {
 void Entity::RotationZ(float angle) {
 	rotationZ += angle;
 }
+
 void Entity::MovePosition(float speed, std::string MoveDirection) {
 	switch (CodeString(MoveDirection))
 	{
@@ -196,6 +220,9 @@ void Entity::MovePosition(float speed, std::string MoveDirection) {
 	default:
 		break;
 	}
+	if (coll != nullptr) {
+		coll->SetPosition(*position);
+	}
 }
 int Entity::LongitudArray() {
 	return sizeof(positions) / sizeof(*positions);
@@ -210,7 +237,7 @@ void Entity::AspectRatio(float x, float y) {
 		max = y;
 	while(aux < LongitudArray()) {
 		positions[aux] = positions[aux] / max;
-		std::cout << "Posicion: " + aux << std::endl;
+		//std::cout << "Posicion: " + aux << std::endl;
 		if (aux % 2) {
 			positions[aux] = positions[aux] * x;
 		}
@@ -271,6 +298,12 @@ void Entity::AddComponent(std::string comp) {
 		if (anim == nullptr)
 			anim = new Animator();
 	}
+	if (comp == "BoxCollider2D") {
+		if (coll == nullptr) {
+			coll = new BoxCollider2D(*scale, *position);
+			EngineUtils::ColliderControler::Instance()->NewCollider(coll);
+		}
+	}
 }
 Material* Entity::GetMaterial() {
 	return material;
@@ -291,4 +324,24 @@ void Entity::SetTextCords() {
 	//Cuarto punto(1,0)
 	positions[30] = frame[6];
 	positions[31] = frame[7];
+}
+void Entity::ColliderUpdate() {
+	if (coll->GetEnter())
+		OnColliderEnter2D(coll->GetCollider());
+	if (coll->GetStay())
+		OnColliderStay2D(coll->GetCollider());
+	if (coll->GetExit()) {
+		OnColliderExit2D(coll->GetCollider());
+		coll->SetExit(false);
+	}
+}
+
+void Entity::OnColliderEnter2D(Collider* _coll) {
+	//std::cout << "Enter" << std::endl;
+}
+void Entity::OnColliderStay2D(Collider* _coll) {
+	//std::cout << "Stay" << std::endl;
+}
+void Entity::OnColliderExit2D(Collider* _coll) {
+	//std::cout << "ExitA" << std::endl;
 }

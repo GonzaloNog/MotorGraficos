@@ -1,5 +1,5 @@
 ﻿C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\MSBuild\Microsoft\VC\v160\Microsoft.CppBuild.targets(477,5): warning MSB8004: El directorio Output no termina con una barra diagonal final. Esta instancia de compilación agregará la barra diagonal porque es necesaria para que se pueda evaluar correctamente el directorio Output.
-  Shape.cpp
+  Entity.cpp
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(17,22): warning C4251: 'Renderer::ViewMatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Renderer.h(18,24): warning C4251: 'Renderer::CameraMatrix': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Renderer'
@@ -14,6 +14,8 @@ C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Timer.h(12,
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\chrono(583): message : vea la declaración de 'std::chrono::time_point<std::chrono::system_clock,std::chrono::duration<std::chrono::system_clock::rep,std::chrono::system_clock::period>>'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Timer.h(13,42): warning C4251: 'EngineUtils::Timer::mDeltaTime': class 'std::chrono::duration<float,std::ratio<1,1>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'EngineUtils::Timer'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Timer.h(13): message : vea la declaración de 'std::chrono::duration<float,std::ratio<1,1>>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\ColliderControler.h(13,33): warning C4251: 'EngineUtils::ColliderControler::ListColl': class 'std::list<Collider *,std::allocator<Collider *>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'EngineUtils::ColliderControler'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\ColliderControler.h(13): message : vea la declaración de 'std::list<Collider *,std::allocator<Collider *>>'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Animation.h(9,25): warning C4251: 'Animation::frames': class 'std::list<int,std::allocator<int>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Animation'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Animation.h(9): message : vea la declaración de 'std::list<int,std::allocator<int>>'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Animation.h(13,18): warning C4251: 'Animation::name': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Animation'
@@ -22,6 +24,10 @@ C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Animator.h(
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Animator.h(7): message : vea la declaración de 'std::list<Animation *,std::allocator<Animation *>>'
 C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Animator.h(9,31): warning C4251: 'Animator::CurrentAnimation': class 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Animator'
 C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.27.29110\include\xstring(4564): message : vea la declaración de 'std::basic_string<char,std::char_traits<char>,std::allocator<char>>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.h(27,23): warning C4251: 'Entity::projection': struct 'glm::mat<4,4,glm::f32,glm::packed_highp>' necesita tener una interfaz DLL para que la utilicen los clientes de class 'Entity'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Lib\glm\fwd.hpp(520): message : vea la declaración de 'glm::mat<4,4,glm::f32,glm::packed_highp>'
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(235,9): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
+C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\GraficosMotor\Entity.cpp(237,9): warning C4244: '=': conversión de 'float' a 'int'; posible pérdida de datos
      Creando biblioteca C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\GraficosMotor.lib y objeto C:\Users\noggo\Desktop\GIT\MotorGraficos\GraficosMotor\Game\GraficosMotor.exp
 LINK : warning LNK4098: la biblioteca predeterminada'LIBCMT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca
 LINK : warning LNK4098: la biblioteca predeterminada'MSVCRT' entra en conflicto con otras bibliotecas; use la biblioteca /NODEFAULTLIB:biblioteca

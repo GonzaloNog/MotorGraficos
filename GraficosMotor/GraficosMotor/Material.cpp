@@ -37,7 +37,6 @@ void Material::StartSprite() {
 	{
 		std::cout << "Failed to load texture" << std::endl;
 	}
-	std::cout <<&m_Width<< std::endl;
 	stbi_image_free(data);
 	
 }

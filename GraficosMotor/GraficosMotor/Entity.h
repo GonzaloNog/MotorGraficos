@@ -6,7 +6,9 @@
 #include "Renderer.h"
 #include "Material.h"
 #include "Timer.h"
+#include "ColliderControler.h"
 #include "Animator.h"
+//#include "BoxCollider2D.h"
 
 class ZENGINE_API Entity
 {
@@ -14,6 +16,7 @@ protected:
 	Renderer* ren;
 	Material* material = nullptr;
 	Animator* anim = nullptr;
+	Collider* coll = nullptr;
 	float positions[32] = {
 		 0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 1.0f,   1.0f, 1.0f,   
 		 0.5f, -0.5f, 0.0f,   1.0f, 1.0f, 1.0f,   1.0f, 0.0f,   
@@ -21,6 +24,7 @@ protected:
 		-0.5f,  0.5f, 0.0f,   1.0f, 1.0f, 1.0f,   0.0f, 1.0f    
 	};
 	glm::vec3 * position = new glm::vec3(0.0f, 0.0f, 0.0f);
+	glm::mat4 projection = glm::ortho(-2.0f, 2.0f, -1.5f, 1.5f, -1.0f, 1.0f);
 	float rotationX = 0.f;
 	float rotationY = 0.f;
 	float rotationZ = 0.f;
@@ -30,11 +34,14 @@ protected:
 	//glm::mat4 * ModelMatrix =  new glm::mat4(1.f);
 	float elapsedTIme = 0.0f;
 	float frames = 0;
+
 	unsigned int indices[6]{
 		0, 1, 3,
 		1, 2, 3
 	};
 	unsigned int buffer, VAO, EBO;
+
+	
 public:
 	Entity();
 	Entity(Renderer* ren);
@@ -61,5 +68,11 @@ public:
 	Material* GetMaterial();
 	Animator* GetAnimator();
 	void SetTextCords();
+	//Collider
+	void ColliderUpdate();
+
+	virtual void OnColliderEnter2D(Collider* _coll);
+	virtual void OnColliderStay2D(Collider* _coll);
+	virtual void OnColliderExit2D(Collider* _coll);
 };
 
