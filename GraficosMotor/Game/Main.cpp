@@ -6,5 +6,5 @@
 
 int main() {
 	Game * b = new Game();
-	b->Loop();
+	b->Play();
 }

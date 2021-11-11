@@ -1,88 +1,58 @@
 #include "Renderer.h"
 
-Renderer::Renderer() {
 
+Renderer::Renderer(GLFWwindow * win) {
+	wind = win;
 }
 Renderer::~Renderer() {
 
 }
-void Renderer::DrawTriangle(GLFWwindow* win){
-	float positions[6] = {
-		-0.5f, -0.5f,
-		0.0f,0.5f,
-		0.5f,-0.5f
-	};
-
-	unsigned int buffer;
-	glGenBuffers(1, &buffer);
-	glBindBuffer(GL_ARRAY_BUFFER,buffer);
-	glBufferData(GL_ARRAY_BUFFER, 6 * sizeof(float), positions, GL_STATIC_DRAW);
-
-	glEnableVertexAttribArray(0);
-	glVertexAttribPointer(0,2,GL_FLOAT, GL_FALSE, sizeof(float) * 2, 0);
-
-	glBindBuffer(GL_ARRAY_BUFFER,0);
-	
-	std::string vertexShader =
-		"#version 330 core\n"
-		"\n"
-		"layout(location = 0) in vec4 position;\n"
-		"\n"
-		"void main()\n"
-		"{\n"
-		"   gl_Position = position;\n"
-		"}\n";
-	std::string fragmentShader =
-		"#version 330 core\n"
-		"\n"
-		"layout(location = 0) out vec4 color;\n"
-		"\n"
-		"void main()\n"
-		"{\n"
-		"   color = vec4(0.5,0.0,0.0,1.0);\n"
-		"}\n";
-	
-	unsigned int shader = CreateShader(vertexShader,fragmentShader);
-	glUseProgram(shader);
-	
-		glClear(GL_COLOR_BUFFER_BIT);
-		glDrawArrays(GL_TRIANGLES, 0, 3);
-		glfwSwapBuffers(win);
-		glfwPollEvents();
+void Renderer::FreeMemory() {
+	//delete ent;
 }
-unsigned int Renderer::CreateShader(const std::string& vertexShader, const std::string& fragmentShader) {
-	unsigned int program = glCreateProgram();
-	unsigned int vs = CompileShader(vertexShader, GL_VERTEX_SHADER);
-	unsigned int fs = CompileShader(fragmentShader, GL_FRAGMENT_SHADER);
-
-	glAttachShader(program, vs);
-	glAttachShader(program, fs);
-	glLinkProgram(program);
-	glValidateProgram(program);
-
-	glDeleteShader(vs);
-	glDeleteShader(fs);
-
-	return program;
+void Renderer::SetColorBackground(float a, float b, float c) {
+	color[0] = a;
+	color[1] = b;
+	color[2] = c;
 }
-unsigned int Renderer::CompileShader(const std::string& source, unsigned int type) {
-	unsigned int id = glCreateShader(type);
-	const char* src = source.c_str();
-	glShaderSource(id, 1, &src, nullptr);
-	glCompileShader(id);
-
-	int result;
-	glGetShaderiv(id, GL_COMPILE_STATUS, &result);
-	if (result == GL_FALSE) {
-		int lenght;
-		glGetShaderiv(id, GL_INFO_LOG_LENGTH, &lenght);
-		char* message = (char*)alloca(lenght * sizeof(char));
-		glGetShaderInfoLog(id, lenght, &lenght, message);
-		std::cout << "Failed to compile "<< (type == GL_VERTEX_SHADER ? "Vertex" : "fragment") << " Shader!" << std::endl;
-		std::cout << message << std::endl;
-		glDeleteShader(id);
-		return 0;
-	}
-
-	return id;
+void Renderer::setColorBackground(float a, float b, float c, float d) {
+	color[0] = a;
+	color[1] = b;
+	color[2] = c;
+	color[3] = d;
 }
+void Renderer::MoveEntity(float speed, std::string moveDirection) {
+	//ent->MovePosition(speed, moveDirection);
+}
+void Renderer::ScaleEntity(float scale) {
+	//ent->Scale(scale);
+}
+void Renderer::ModifyScaleEntity(float scale) {
+	//ent->ModifyScale(scale);
+}
+void Renderer::RotationXEntity(float _angle) {
+	//ent->RotationX(_angle);
+}
+void Renderer::RotationYEntity(float _angle) {
+	//ent->RotationY(_angle);
+}
+void Renderer::RotationZEntity(float _angle) {
+	//ent->RotationZ(_angle);
+}
+void Renderer::UpdateWindow(){
+	ConfigCamera();
+	glfwPollEvents();
+	glClearColor(color[0], color[1], color[2], color[3]);
+	glfwSwapBuffers(wind);
+	glClear(GL_COLOR_BUFFER_BIT);
+}
+void Renderer::ConfigCamera() {
+	ViewMatrix = glm::translate(glm::mat4(), glm::vec3(0.0f, 0.0f, 3.0f));
+	CameraMatrix = glm::lookAt(glm::vec3(0.f, 0.f, 0.f), glm::vec3(0.f, 0.f, 0.f), glm::vec3(0, 0, 1));
+	projectionMatrix = glm::perspective(45.0f, 4.0f /3.0f, 0.1f, 100.0f);
+	MVPmatrix = projectionMatrix * ViewMatrix;
+}
+void Renderer::Draw(int count) {
+	glDrawElements(GL_TRIANGLES, count, GL_UNSIGNED_INT, 0);
+}
+
